@@ -116,7 +116,7 @@ function initPortfolioFilter() {
       const cat = btn.dataset.filter;
       cards.forEach((card) => {
         const show = cat === 'all' || card.dataset.category === cat;
-        card.style.display = show ? '' : 'none';
+        card.classList.toggle('filter-hidden', !show);
       });
     });
   });
