@@ -125,8 +125,9 @@
   <!-- ── HERO SLIDER ── -->
   <section class="relative h-screen min-h-[600px] overflow-hidden" aria-label="Hero">
 
-    <div class="hero-slide active bg-oyster">
-      <div class="container mx-auto px-6 md:px-12 lg:px-20 h-full flex items-center">
+    <div class="hero-slide active" style="background-image:url('./assets/images/slider/slide_06.jpeg');background-size:cover;background-position:center;">
+      <div class="absolute inset-0" style="background-color:rgba(246,244,239,0.88);"></div>
+      <div class="container mx-auto px-6 md:px-12 lg:px-20 h-full flex items-center relative z-10">
         <div class="max-w-4xl pt-20">
           <div class="flex flex-col gap-1 w-40 mb-10 animate-on-scroll">
             <div class="h-2 bg-forest-green rounded-sm opacity-100"></div>
@@ -150,8 +151,9 @@
       </div>
     </div>
 
-    <div class="hero-slide bg-charcoal">
-      <div class="container mx-auto px-6 md:px-12 lg:px-20 h-full flex items-center">
+    <div class="hero-slide" style="background-image:url('./assets/images/slider/slide_09.jpeg');background-size:cover;background-position:center;">
+      <div class="absolute inset-0" style="background-color:rgba(38,40,38,0.82);"></div>
+      <div class="container mx-auto px-6 md:px-12 lg:px-20 h-full flex items-center relative z-10">
         <div class="max-w-4xl pt-20">
           <span class="section-divider inline-block mb-4"></span>
           <h2 class="text-5xl md:text-7xl font-black text-white leading-tight mb-6">
@@ -163,8 +165,9 @@
       </div>
     </div>
 
-    <div class="hero-slide bg-forest-green">
-      <div class="container mx-auto px-6 md:px-12 lg:px-20 h-full flex items-center">
+    <div class="hero-slide" style="background-image:url('./assets/images/slider/slide_40.jpeg');background-size:cover;background-position:center;">
+      <div class="absolute inset-0" style="background-color:rgba(42,75,32,0.84);"></div>
+      <div class="container mx-auto px-6 md:px-12 lg:px-20 h-full flex items-center relative z-10">
         <div class="max-w-4xl pt-20">
           <span class="section-divider inline-block mb-4"></span>
           <h2 class="text-5xl md:text-7xl font-black text-white leading-tight mb-6">
@@ -240,6 +243,80 @@
           <h3 class="text-xl font-bold text-forest-green mb-3">We build for decades.</h3>
           <p class="text-concrete-grey leading-relaxed text-sm">Our infrastructure outlasts us. That's the point.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SERVICES OVERVIEW ── -->
+  <section class="py-20 md:py-32 bg-oyster" aria-labelledby="home-services-heading">
+    <div class="container mx-auto px-6 md:px-12 lg:px-20">
+      <div class="text-center mb-16">
+        <span class="text-xs uppercase tracking-widest text-laterite-clay font-bold mb-3 block">What We Do</span>
+        <span class="section-divider mx-auto"></span>
+        <h2 id="home-services-heading" class="text-4xl md:text-5xl font-black text-forest-green mb-4">Three disciplines. One team.</h2>
+        <p class="text-lg text-concrete-grey max-w-2xl mx-auto">We design, specify, supply, and build across geosynthetics, marine, and civil engineering — so the outcome is never someone else's problem.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+
+        <a href="./services.html#geosynthetics" class="paper-card bg-white rounded-xl overflow-hidden group block animate-on-scroll">
+          <div class="aspect-[4/3] overflow-hidden relative">
+            <img src="./assets/images/slider/slide_40.jpeg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Geocell ground reinforcement system">
+            <div class="absolute inset-0" style="background-color:rgba(42,75,32,0.50);"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-5">
+              <span class="text-xs uppercase tracking-widest text-[#E2B78D] font-bold">01 — Geosynthetics</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-forest-green mb-3 group-hover:text-moss transition-colors">Geosynthetics Engineering</h3>
+            <p class="text-concrete-grey text-sm leading-relaxed">Ground reinforcement, drainage composites, containment liners, and erosion control systems — the hidden backbone of durable infrastructure.</p>
+            <div class="mt-4 inline-flex items-center gap-2 text-forest-green font-bold text-sm group-hover:gap-4 transition-all">
+              Learn more
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <a href="./services.html#marine" class="paper-card bg-white rounded-xl overflow-hidden group block animate-on-scroll delay-100">
+          <div class="aspect-[4/3] overflow-hidden relative">
+            <img src="./assets/images/slider/slide_45.jpeg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Marine geobag shoreline armour system">
+            <div class="absolute inset-0" style="background-color:rgba(38,40,38,0.50);"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-5">
+              <span class="text-xs uppercase tracking-widest text-[#E2B78D] font-bold">02 — Marine</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-forest-green mb-3 group-hover:text-moss transition-colors">Marine &amp; Coastal Protection</h3>
+            <p class="text-concrete-grey text-sm leading-relaxed">Revetments, seawalls, breakwaters, and shoreline stabilisation engineered for Nigeria's Atlantic coast and inland waterways.</p>
+            <div class="mt-4 inline-flex items-center gap-2 text-forest-green font-bold text-sm group-hover:gap-4 transition-all">
+              Learn more
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </div>
+          </div>
+        </a>
+
+        <a href="./services.html#civil" class="paper-card bg-white rounded-xl overflow-hidden group block animate-on-scroll delay-200">
+          <div class="aspect-[4/3] overflow-hidden relative">
+            <img src="./assets/images/slider/slide_41.jpeg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Drainage pipe installation — civil infrastructure">
+            <div class="absolute inset-0" style="background-color:rgba(42,75,32,0.50);"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-5">
+              <span class="text-xs uppercase tracking-widest text-[#E2B78D] font-bold">03 — Civil</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-forest-green mb-3 group-hover:text-moss transition-colors">Civil Infrastructure</h3>
+            <p class="text-concrete-grey text-sm leading-relaxed">Roads, drainage networks, earthworks, and ground improvement — from subbase to surface, delivered as one accountable contract.</p>
+            <div class="mt-4 inline-flex items-center gap-2 text-forest-green font-bold text-sm group-hover:gap-4 transition-all">
+              Learn more
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="text-center">
+        <a href="./services.html" class="paper-btn-primary">View All Services</a>
       </div>
     </div>
   </section>

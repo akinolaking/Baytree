@@ -4,7 +4,7 @@ import { pathToFileURL } from 'node:url';
 import { chromium, firefox } from 'playwright-core';
 import axe from 'axe-core';
 
-const root = '/home/akinolaking/Baytree';
+const root = '/home/user/Baytree';
 const outDir = path.join(root, 'output/qa');
 fs.mkdirSync(outDir, { recursive: true });
 
@@ -142,28 +142,18 @@ async function main() {
   };
 
   const chrome = await chromium.launch({
-    executablePath: '/usr/bin/google-chrome',
+    executablePath: '/home/user/Baytree/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell',
     headless: true,
     args: ['--no-sandbox', '--disable-gpu'],
   });
 
   let ff = null;
-  try {
-    ff = await firefox.launch({ executablePath: '/usr/bin/firefox', headless: true });
-  } catch (error) {
-    report.crossBrowser.push({ browser: 'firefox', status: 'skipped', reason: String(error.message || error) });
-  }
+  report.crossBrowser.push({ browser: 'firefox', status: 'skipped', reason: 'Firefox not available in this environment' });
 
   await runResponsiveScreenshots(chrome, report);
   await runBrowserSmoke('chrome', chrome, report);
-  if (ff) {
-    await runBrowserSmoke('firefox', ff, report);
-  }
   await runA11yAudit(chrome, report);
 
-  if (ff) {
-    await ff.close();
-  }
   await chrome.close();
 
   report.summary = {
