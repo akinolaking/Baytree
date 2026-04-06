@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Lato', sans-serif;
+    color: #262826;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+
+  /* ── Paper card (elevation system) ── */
+  .paper-card {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: box-shadow 0.3s ease;
+  }
+  .paper-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15), 0 3px 6px rgba(0,0,0,0.10);
+  }
+
+  /* ── Buttons ── */
+  .paper-btn-primary {
+    @apply inline-block px-8 py-4 bg-forest-green text-white font-bold rounded-md
+           hover:bg-moss transition-colors duration-200 text-center cursor-pointer;
+  }
+  .paper-btn-secondary {
+    @apply inline-block px-8 py-4 bg-transparent text-forest-green font-bold rounded-md
+           border-2 border-forest-green hover:bg-forest-green hover:text-white
+           transition-colors duration-200 text-center cursor-pointer;
+  }
+
+  /* ── Form fields ── */
+  .paper-input {
+    @apply w-full px-4 py-3 border border-silver rounded-md text-charcoal
+           bg-white focus:outline-none focus:border-forest-green focus:ring-2
+           focus:ring-forest-green/20 transition-colors duration-200 text-base;
+  }
+  .paper-textarea {
+    @apply w-full px-4 py-3 border border-silver rounded-md text-charcoal
+           bg-white focus:outline-none focus:border-forest-green focus:ring-2
+           focus:ring-forest-green/20 transition-colors duration-200 text-base
+           resize-y min-h-[150px];
+  }
+
+  /* ── Logo strata bars (CSS version) ── */
+  .logo-strata {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+  .logo-strata span {
+    display: block;
+    height: 6px;
+    border-radius: 2px;
+    background-color: #2A4B20;
+  }
+  .logo-strata span:nth-child(1) { opacity: 1;    background-color: #2A4B20; }
+  .logo-strata span:nth-child(2) { opacity: 0.85; background-color: #2A4B20; }
+  .logo-strata span:nth-child(3) { opacity: 0.70; background-color: #446B35; }
+  .logo-strata span:nth-child(4) { opacity: 0.55; background-color: #809870; }
+  .logo-strata span:nth-child(5) { opacity: 0.40; background-color: #809870; }
+
+  /* White variant (for dark backgrounds) */
+  .logo-strata-white span {
+    background-color: #ffffff !important;
+  }
+
+  /* ── Section divider (laterite-clay accent line) ── */
+  .section-divider {
+    @apply block w-16 h-1 bg-laterite-clay rounded-sm my-6;
+  }
+
+  /* ── Scroll animations ── */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  .animate-on-scroll.visible {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  .animate-on-scroll.visible.delay-100 { animation-delay: 0.1s; }
+  .animate-on-scroll.visible.delay-200 { animation-delay: 0.2s; }
+  .animate-on-scroll.visible.delay-300 { animation-delay: 0.3s; }
+
+  /* ── Hero slider ── */
+  .hero-slide {
+    @apply absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out;
+  }
+  .hero-slide.active {
+    @apply opacity-100;
+  }
+  .slider-dot {
+    @apply w-2.5 h-2.5 rounded-full bg-white/50 transition-all duration-200 cursor-pointer;
+  }
+  .slider-dot.active {
+    @apply bg-white w-6;
+  }
+
+  /* ── Portfolio filter buttons ── */
+  .filter-btn {
+    @apply px-6 py-2 text-sm font-bold uppercase tracking-wider rounded-md
+           border border-concrete-grey text-concrete-grey
+           hover:border-forest-green hover:text-forest-green transition-colors duration-200;
+  }
+  .filter-btn.active {
+    @apply bg-forest-green text-white border-forest-green;
+  }
+
+  /* ── Process timeline step ── */
+  .timeline-step {
+    @apply flex flex-col items-center text-center relative;
+  }
+  .timeline-step-number {
+    @apply w-12 h-12 rounded-full bg-forest-green text-white font-bold text-lg
+           flex items-center justify-center mb-4 relative z-10;
+  }
+
+  /* ── Testimonial card ── */
+  .testimonial-card {
+    @apply paper-card bg-white rounded-lg p-8;
+  }
+  .testimonial-quote {
+    @apply text-5xl font-black text-forest-green leading-none mb-4 select-none;
+  }
+}
+
+@layer utilities {
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "baytree-website",
+  "version": "1.0.0",
+  "description": "BayTree Engineering & Construction — Official Website",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch",
+    "build": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --minify",
+    "start": "npx serve . -p 3000"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}
