@@ -7,6 +7,9 @@
     font-family: 'Lato', sans-serif;
     color: #262826;
   }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600 !important;
+  }
   *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -57,27 +60,21 @@
     display: block;
     height: 6px;
     border-radius: 2px;
-    background-color: #2A4B20;
   }
   .logo-strata span:nth-child(1) { opacity: 1;    background-color: #2A4B20; }
   .logo-strata span:nth-child(2) { opacity: 0.85; background-color: #2A4B20; }
   .logo-strata span:nth-child(3) { opacity: 0.70; background-color: #446B35; }
   .logo-strata span:nth-child(4) { opacity: 0.55; background-color: #809870; }
   .logo-strata span:nth-child(5) { opacity: 0.40; background-color: #809870; }
+  .logo-strata-white span { background-color: #ffffff !important; }
 
-  /* White variant (for dark backgrounds) */
-  .logo-strata-white span {
-    background-color: #ffffff !important;
-  }
-
-  /* ── Section divider (laterite-clay accent line) ── */
+  /* ── Section divider ── */
   .section-divider {
     @apply block w-16 h-1 bg-laterite-clay rounded-sm my-6;
   }
 
   /* ── Scroll animations ── */
   .animate-on-scroll {
-    opacity: 0;
     transform: translateY(20px);
   }
   .animate-on-scroll.visible {
@@ -91,47 +88,133 @@
   .hero-slide {
     @apply absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out;
   }
-  .hero-slide.active {
-    @apply opacity-100;
-  }
+  .hero-slide.active { @apply opacity-100; }
   .slider-dot {
     @apply w-2.5 h-2.5 rounded-full bg-white/50 transition-all duration-200 cursor-pointer;
   }
-  .slider-dot.active {
-    @apply bg-white w-6;
-  }
+  .slider-dot.active { @apply bg-white w-6; }
 
-  /* ── Portfolio filter buttons ── */
+  /* ── Portfolio filter ── */
   .filter-btn {
     @apply px-6 py-2 text-sm font-bold uppercase tracking-wider rounded-md
            border border-concrete-grey text-concrete-grey
            hover:border-forest-green hover:text-forest-green transition-colors duration-200;
   }
-  .filter-btn.active {
-    @apply bg-forest-green text-white border-forest-green;
-  }
+  .filter-btn.active { @apply bg-forest-green text-white border-forest-green; }
 
-  /* ── Process timeline step ── */
-  .timeline-step {
-    @apply flex flex-col items-center text-center relative;
-  }
+  /* ── Process timeline ── */
+  .timeline-step        { @apply flex flex-col items-center text-center; }
   .timeline-step-number {
     @apply w-12 h-12 rounded-full bg-forest-green text-white font-bold text-lg
-           flex items-center justify-center mb-4 relative z-10;
+           flex items-center justify-center mb-4;
   }
 
   /* ── Testimonial card ── */
-  .testimonial-card {
-    @apply paper-card bg-white rounded-lg p-8;
+  .testimonial-card { @apply paper-card bg-white rounded-lg p-8; }
+  .testimonial-quote { @apply text-5xl font-black text-forest-green leading-none mb-4 select-none; }
+
+  /* ── Value card (replaces plain text value strip) ── */
+  .value-card {
+    @apply paper-card bg-white rounded-xl p-8 flex flex-col gap-4;
   }
-  .testimonial-quote {
-    @apply text-5xl font-black text-forest-green leading-none mb-4 select-none;
+  .value-card-icon {
+    @apply w-14 h-14 rounded-xl bg-forest-green/10 flex items-center justify-center
+           text-forest-green flex-shrink-0;
   }
+
+  /* ── Partner card ── */
+  .partner-card {
+    @apply paper-card bg-white rounded-xl p-8 flex flex-col gap-4 border border-silver/30
+           hover:border-forest-green/30 transition-colors duration-300;
+  }
+  .partner-logo-area {
+    @apply w-16 h-16 rounded-lg bg-oyster flex items-center justify-center flex-shrink-0;
+  }
+
+  /* ── Leadership card ── */
+  .leadership-card {
+    @apply paper-card bg-white rounded-xl overflow-hidden;
+  }
+  .leadership-card-avatar {
+    @apply w-full aspect-square bg-forest-green/10 flex items-center justify-center;
+  }
+  .leadership-card-body { @apply p-6; }
+
+  /* ── Product card ── */
+  .product-card {
+    @apply paper-card bg-white rounded-xl p-6 border-l-4 border-forest-green;
+  }
+
+  /* ── Mobile drawer ── */
+  .drawer-overlay {
+    @apply fixed inset-0 bg-black/50 z-[60] opacity-0 pointer-events-none transition-opacity duration-300;
+  }
+  .drawer-overlay.open { @apply opacity-100 pointer-events-auto; }
+
+  .mobile-drawer {
+    @apply fixed top-0 right-0 h-full w-80 max-w-full bg-white z-[70] shadow-2xl
+           transform translate-x-full transition-transform duration-300 ease-in-out
+           flex flex-col;
+  }
+  .mobile-drawer.open { @apply translate-x-0; }
+
+  .drawer-header {
+    @apply flex items-center justify-between p-6 border-b border-silver/30;
+  }
+  .drawer-nav { @apply flex-1 overflow-y-auto p-6 flex flex-col gap-1; }
+  .drawer-nav-link {
+    @apply flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-bold uppercase
+           tracking-wider text-charcoal hover:bg-oyster hover:text-forest-green
+           transition-colors duration-150;
+  }
+  .drawer-nav-link.active { @apply bg-forest-green/10 text-forest-green; }
+  .drawer-footer { @apply p-6 border-t border-silver/30 flex flex-col gap-4; }
+
+  .drawer-social-row { @apply flex items-center gap-3; }
+  .drawer-social-btn {
+    @apply w-10 h-10 rounded-full bg-oyster flex items-center justify-center
+           text-concrete-grey hover:bg-forest-green hover:text-white
+           transition-colors duration-200;
+  }
+
+  /* ── Footer social icons ── */
+  .footer-social-btn {
+    @apply w-9 h-9 rounded-full bg-white/10 flex items-center justify-center
+           text-white hover:bg-laterite-clay transition-colors duration-200;
+  }
+
+  /* Ensure footer accent text meets contrast on dark background */
+  .site-footer .text-laterite-clay {
+    color: #E2B78D;
+  }
+  .site-footer .text-laterite-clay:hover {
+    color: #ffffff;
+  }
+
+  /* ── WhatsApp floating button ── */
+  .whatsapp-fab {
+    @apply fixed bottom-6 right-6 z-50 flex items-center gap-3 cursor-pointer;
+  }
+  .whatsapp-fab-bubble {
+    @apply w-14 h-14 rounded-full shadow-lg flex items-center justify-center
+           transition-transform duration-200 hover:scale-110;
+    background-color: #25D366;
+  }
+  .whatsapp-fab-tooltip {
+    @apply hidden md:block px-3 py-1.5 bg-charcoal text-white text-xs font-bold
+           rounded-lg opacity-0 pointer-events-none transition-opacity duration-200
+           whitespace-nowrap;
+  }
+  .whatsapp-fab:hover .whatsapp-fab-tooltip { @apply opacity-100; }
 }
 
 @layer utilities {
   @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from { transform: translateY(20px); }
+    to   { transform: translateY(0); }
+  }
+  @keyframes slideInRight {
+    from { transform: translateX(100%); }
+    to   { transform: translateX(0); }
   }
 }

@@ -4,36 +4,93 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BayTree Engineering &amp; Construction | We Build What You Don't See</title>
-  <meta name="description" content="BayTree Engineering & Construction delivers specialized geosynthetics, marine protection, and civil infrastructure solutions across Nigeria.">
+  <meta name="description" content="BayTree Engineering & Construction delivers specialised geosynthetics, marine protection, and civil infrastructure solutions across Nigeria. Engineering Tomorrow's Infrastructure.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.baytreeng.com/">
-
-  <!-- Open Graph -->
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="https://www.baytreeng.com/">
   <meta property="og:title"       content="BayTree Engineering & Construction">
-  <meta property="og:description" content="We build the things people don't see. Geosynthetics, marine protection, civil infrastructure.">
+  <meta property="og:description" content="We build the things people don't see. Geosynthetics, marine protection, civil infrastructure — durable, sustainable, unmatched.">
   <meta property="og:image"       content="/assets/images/og-image.png">
-
-  <!-- Fonts -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="/assets/images/og-image.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-
-  <!-- Compiled CSS -->
   <link rel="stylesheet" href="./assets/css/main.css">
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="./assets/images/BT_Strata_Icon_Forest.png">
 </head>
 <body class="text-charcoal">
 
-  <!-- ── HEADER ── -->
-  <header id="header" class="fixed w-full top-0 z-50 transition-all duration-300">
-    <div class="container mx-auto px-6 md:px-12 lg:px-20">
-      <nav class="flex items-center justify-between py-5">
+  <!-- ── DRAWER OVERLAY ── -->
+  <div id="drawer-overlay" class="drawer-overlay !z-60" aria-hidden="true"></div>
 
-        <a href="/" class="flex items-center gap-4" aria-label="BayTree home">
+  <!-- ── MOBILE DRAWER ── -->
+  <nav id="mobile-drawer" class="mobile-drawer !z-70" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <a href="./index.html" class="flex items-center gap-3">
+        <div class="flex flex-col gap-0.5 w-8">
+          <div class="h-1.5 bg-forest-green rounded-sm"></div>
+          <div class="h-1.5 bg-forest-green rounded-sm opacity-80"></div>
+          <div class="h-1.5 bg-moss    rounded-sm opacity-65"></div>
+          <div class="h-1.5 bg-sage    rounded-sm opacity-50"></div>
+          <div class="h-1.5 bg-sage    rounded-sm opacity-35"></div>
+        </div>
+        <span class="font-black text-forest-green uppercase tracking-tight text-lg">BAYTREE</span>
+      </a>
+      <button id="drawer-close" class="p-2 rounded-lg hover:bg-oyster transition-colors" aria-label="Close menu">
+        <svg class="w-6 h-6 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-nav">
+      <a href="./index.html"              class="drawer-nav-link active">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        Home
+      </a>
+      <a href="./services.html" class="drawer-nav-link">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+        Services
+      </a>
+      <a href="./projects.html" class="drawer-nav-link">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+        Projects
+      </a>
+      <a href="./about.html"    class="drawer-nav-link">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        About
+      </a>
+      <div class="pt-4 mt-4 border-t border-silver/30">
+        <a href="./contact.html" class="paper-btn-primary w-full text-center block">Get in Touch</a>
+      </div>
+    </div>
+
+    <div class="drawer-footer">
+      <p class="text-xs uppercase tracking-wider text-concrete-grey font-bold">Follow us</p>
+      <div class="drawer-social-row">
+        <a href="#" class="drawer-social-btn" aria-label="Instagram">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="#" class="drawer-social-btn" aria-label="Facebook">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="#" class="drawer-social-btn" aria-label="LinkedIn">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="#" class="drawer-social-btn" aria-label="Twitter / X">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HEADER (always white) ── -->
+  <header id="header" class="fixed w-full top-0 z-50 bg-white transition-shadow duration-300">
+    <div class="container mx-auto px-6 md:px-12 lg:px-20">
+      <nav class="flex items-center justify-between py-4">
+        <a href="./index.html" class="flex items-center gap-4" aria-label="BayTree home">
           <div class="flex flex-col gap-0.5 w-10">
             <div class="h-1.5 bg-forest-green rounded-sm opacity-100"></div>
             <div class="h-1.5 bg-forest-green rounded-sm opacity-85"></div>
@@ -48,40 +105,29 @@
         </a>
 
         <div class="hidden md:flex items-center gap-8">
-          <a href="/"              class="text-sm font-bold uppercase tracking-wider text-forest-green">Home</a>
-          <a href="/services.html" class="text-sm font-bold uppercase tracking-wider text-charcoal hover:text-forest-green transition-colors">Services</a>
-          <a href="/projects.html" class="text-sm font-bold uppercase tracking-wider text-charcoal hover:text-forest-green transition-colors">Projects</a>
-          <a href="/about.html"    class="text-sm font-bold uppercase tracking-wider text-charcoal hover:text-forest-green transition-colors">About</a>
-          <a href="/contact.html"  class="paper-btn-primary !py-3 !px-6 text-sm">Contact</a>
+          <a href="./index.html"              class="text-sm font-bold uppercase tracking-wider text-forest-green">Home</a>
+          <a href="./services.html" class="text-sm font-bold uppercase tracking-wider text-charcoal hover:text-forest-green transition-colors">Services</a>
+          <a href="./projects.html" class="text-sm font-bold uppercase tracking-wider text-charcoal hover:text-forest-green transition-colors">Projects</a>
+          <a href="./about.html"    class="text-sm font-bold uppercase tracking-wider text-charcoal hover:text-forest-green transition-colors">About</a>
+          <a href="./contact.html"  class="paper-btn-primary !py-3 !px-6 text-sm">Contact</a>
         </div>
 
-        <button id="menu-toggle" class="md:hidden p-2 text-forest-green" aria-label="Open menu" aria-expanded="false">
-          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-oyster transition-colors text-forest-green" aria-label="Open menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
       </nav>
-
-      <div id="mobile-menu" class="hidden md:hidden pb-6 border-t border-silver/30">
-        <div class="flex flex-col gap-4 pt-4">
-          <a href="/"              class="text-sm font-bold uppercase tracking-wider text-forest-green py-1">Home</a>
-          <a href="/services.html" class="text-sm font-bold uppercase tracking-wider text-charcoal py-1 hover:text-forest-green transition-colors">Services</a>
-          <a href="/projects.html" class="text-sm font-bold uppercase tracking-wider text-charcoal py-1 hover:text-forest-green transition-colors">Projects</a>
-          <a href="/about.html"    class="text-sm font-bold uppercase tracking-wider text-charcoal py-1 hover:text-forest-green transition-colors">About</a>
-          <a href="/contact.html"  class="paper-btn-primary text-sm mt-2 text-center">Contact</a>
-        </div>
-      </div>
     </div>
   </header>
 
-  <!-- ── HERO SLIDER ── -->
   <main>
+  <!-- ── HERO SLIDER ── -->
   <section class="relative h-screen min-h-[600px] overflow-hidden" aria-label="Hero">
 
-    <!-- Slide 1 -->
-    <div class="hero-slide active bg-oyster" aria-hidden="false">
+    <div class="hero-slide active bg-oyster">
       <div class="container mx-auto px-6 md:px-12 lg:px-20 h-full flex items-center">
-        <div class="max-w-4xl pt-24">
+        <div class="max-w-4xl pt-20">
           <div class="flex flex-col gap-1 w-40 mb-10 animate-on-scroll">
             <div class="h-2 bg-forest-green rounded-sm opacity-100"></div>
             <div class="h-2 bg-forest-green rounded-sm opacity-85"></div>
@@ -89,67 +135,71 @@
             <div class="h-2 bg-sage    rounded-sm opacity-55"></div>
             <div class="h-2 bg-sage    rounded-sm opacity-40"></div>
           </div>
-          <h1 class="text-5xl md:text-7xl font-black text-forest-green leading-tight mb-6 animate-on-scroll">
+          <h1 class="text-5xl md:text-7xl font-black text-forest-green leading-tight mb-4 animate-on-scroll">
             We build the things<br>people don't see.
           </h1>
+          <p class="text-lg md:text-xl text-laterite-clay font-bold uppercase tracking-widest mb-6 animate-on-scroll">Engineering Tomorrow's Infrastructure</p>
           <p class="text-xl md:text-2xl text-concrete-grey leading-relaxed mb-10 max-w-2xl animate-on-scroll">
             The reinforced ground beneath a highway. The geotextile layers holding back the Atlantic. The drainage that keeps a city from flooding.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 animate-on-scroll">
-            <a href="/services.html" class="paper-btn-primary">Explore Our Work</a>
-            <a href="/contact.html"  class="paper-btn-secondary">Start a Project</a>
+            <a href="./services.html" class="paper-btn-primary">Explore Our Work</a>
+            <a href="./contact.html"  class="paper-btn-secondary">Start a Project</a>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Slide 2 -->
-    <div class="hero-slide bg-charcoal" aria-hidden="true">
+    <div class="hero-slide bg-charcoal">
       <div class="container mx-auto px-6 md:px-12 lg:px-20 h-full flex items-center">
-        <div class="max-w-4xl pt-24">
+        <div class="max-w-4xl pt-20">
           <span class="section-divider inline-block mb-4"></span>
           <h2 class="text-5xl md:text-7xl font-black text-white leading-tight mb-6">
             Coastlines protected.<br>Highways reinforced.<br>Cities that don't flood.
           </h2>
-          <p class="text-xl text-silver leading-relaxed mb-10 max-w-2xl">
-            One team. Full lifecycle. No shortcuts.
-          </p>
-          <a href="/projects.html" class="paper-btn-primary">View Our Projects</a>
+          <p class="text-xl text-silver leading-relaxed mb-10 max-w-2xl">One team. Full lifecycle. No shortcuts.</p>
+          <a href="./projects.html" class="paper-btn-primary">View Our Projects</a>
         </div>
       </div>
     </div>
 
-    <!-- Slide 3 -->
-    <div class="hero-slide bg-forest-green" aria-hidden="true">
+    <div class="hero-slide bg-forest-green">
       <div class="container mx-auto px-6 md:px-12 lg:px-20 h-full flex items-center">
-        <div class="max-w-4xl pt-24">
+        <div class="max-w-4xl pt-20">
           <span class="section-divider inline-block mb-4"></span>
           <h2 class="text-5xl md:text-7xl font-black text-white leading-tight mb-6">
-            Geosynthetics.<br>Marine Protection.<br>Civil Infrastructure.
+            Durable.<br>Sustainable.<br>Unmatched.
           </h2>
           <p class="text-xl leading-relaxed mb-10 max-w-2xl" style="color:rgba(255,255,255,0.80)">
-            Specialized expertise across the full spectrum of infrastructure engineering in Nigeria.
+            Formed in 2023. Built on decades of engineering expertise. Delivering geosynthetics, marine protection, and civil infrastructure across Nigeria and beyond.
           </p>
-          <a href="/services.html" class="inline-block px-8 py-4 bg-transparent text-white font-bold rounded-md border-2 border-white hover:bg-white hover:text-forest-green transition-colors duration-200 text-center">Our Services</a>
+          <a href="./about.html" class="inline-block px-8 py-4 bg-transparent text-white font-bold rounded-md border-2 border-white hover:bg-white hover:text-forest-green transition-colors duration-200">Our Story</a>
         </div>
       </div>
     </div>
 
-    <!-- Slider controls -->
     <button id="slider-prev" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/20 hover:bg-black/40 transition flex items-center justify-center" aria-label="Previous slide">
-      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-      </svg>
+      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
     </button>
     <button id="slider-next" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-black/20 hover:bg-black/40 transition flex items-center justify-center" aria-label="Next slide">
-      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-      </svg>
+      <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
     </button>
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2" role="tablist" aria-label="Slide navigation">
-      <button class="slider-dot active" role="tab" aria-label="Slide 1" aria-selected="true"></button>
-      <button class="slider-dot"        role="tab" aria-label="Slide 2" aria-selected="false"></button>
-      <button class="slider-dot"        role="tab" aria-label="Slide 3" aria-selected="false"></button>
+      <button class="slider-dot active" role="tab" aria-label="Slide 1"></button>
+      <button class="slider-dot"        role="tab" aria-label="Slide 2"></button>
+      <button class="slider-dot"        role="tab" aria-label="Slide 3"></button>
+    </div>
+  </section>
+
+  <!-- ── STATS STRIP ── -->
+  <section class="py-12 bg-forest-green text-white !mt-0" aria-label="Key statistics">
+    <div class="container mx-auto px-6 md:px-12 lg:px-20">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div><div class="text-4xl font-black mb-1">28+</div><div class="text-sm opacity-70 uppercase tracking-wider">Years leadership experience</div></div>
+        <div><div class="text-4xl font-black mb-1">50+</div><div class="text-sm opacity-70 uppercase tracking-wider">Projects completed</div></div>
+        <div><div class="text-4xl font-black mb-1">60%</div><div class="text-sm opacity-70 uppercase tracking-wider">Faster delivery via OEM</div></div>
+        <div><div class="text-4xl font-black mb-1">3</div><div class="text-sm opacity-70 uppercase tracking-wider">Core divisions</div></div>
+      </div>
     </div>
   </section>
 
@@ -161,46 +211,34 @@
         <h2 id="pillars-heading" class="text-4xl md:text-5xl font-black text-forest-green mb-4">Our identity reflects our work</h2>
         <p class="text-lg text-concrete-grey max-w-2xl mx-auto">Layered, precise, built to last.</p>
       </div>
-
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="paper-card bg-white rounded-lg p-8 text-center animate-on-scroll">
+        <div class="paper-card bg-white rounded-xl p-8 text-center animate-on-scroll">
           <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-oyster rounded-full">
-            <svg class="w-8 h-8 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
+            <svg class="w-8 h-8 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <h3 class="text-xl font-bold text-forest-green mb-3">We measure twice.</h3>
-          <p class="text-concrete-grey leading-relaxed">Every detail matters. Precision isn't a buzzword — it's how we keep coastlines intact.</p>
+          <p class="text-concrete-grey leading-relaxed text-sm">Every detail matters. Precision isn't a buzzword — it's how we keep coastlines intact.</p>
         </div>
-
-        <div class="paper-card bg-white rounded-lg p-8 text-center animate-on-scroll delay-100">
+        <div class="paper-card bg-white rounded-xl p-8 text-center animate-on-scroll delay-100">
           <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-oyster rounded-full">
-            <svg class="w-8 h-8 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
+            <svg class="w-8 h-8 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </div>
           <h3 class="text-xl font-bold text-forest-green mb-3">We go deep.</h3>
-          <p class="text-concrete-grey leading-relaxed">Geotechnical, marine, civil — we don't skim surfaces, we engineer what's underneath.</p>
+          <p class="text-concrete-grey leading-relaxed text-sm">Geotechnical, marine, civil — we don't skim surfaces, we engineer what's underneath.</p>
         </div>
-
-        <div class="paper-card bg-white rounded-lg p-8 text-center animate-on-scroll delay-200">
+        <div class="paper-card bg-white rounded-xl p-8 text-center animate-on-scroll delay-200">
           <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-oyster rounded-full">
-            <svg class="w-8 h-8 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-            </svg>
+            <svg class="w-8 h-8 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           </div>
           <h3 class="text-xl font-bold text-forest-green mb-3">We own the whole job.</h3>
-          <p class="text-concrete-grey leading-relaxed">Design through construction. One team, one outcome, no finger-pointing.</p>
+          <p class="text-concrete-grey leading-relaxed text-sm">Design through construction. One team, one outcome, no finger-pointing.</p>
         </div>
-
-        <div class="paper-card bg-white rounded-lg p-8 text-center animate-on-scroll delay-300">
+        <div class="paper-card bg-white rounded-xl p-8 text-center animate-on-scroll delay-300">
           <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center bg-oyster rounded-full">
-            <svg class="w-8 h-8 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
+            <svg class="w-8 h-8 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <h3 class="text-xl font-bold text-forest-green mb-3">We build for decades.</h3>
-          <p class="text-concrete-grey leading-relaxed">Our infrastructure outlasts us. That's the point.</p>
+          <p class="text-concrete-grey leading-relaxed text-sm">Our infrastructure outlasts us. That's the point.</p>
         </div>
       </div>
     </div>
@@ -211,95 +249,128 @@
     <div class="container mx-auto px-6 md:px-12 lg:px-20">
       <div class="grid lg:grid-cols-2 gap-16 items-center">
         <div class="animate-on-scroll">
-          <span class="text-xs uppercase tracking-widest text-laterite-clay font-bold mb-4 block">CAPABILITIES</span>
-          <h2 id="capabilities-heading" class="text-4xl md:text-5xl font-black mb-6 leading-tight">
-            Specialized expertise in geosynthetics, marine protection, and civil infrastructure.
-          </h2>
-          <p class="text-lg leading-relaxed mb-8 opacity-90">
-            Baytree handles the full lifecycle — design, materials, construction — so there's one team accountable for the outcome.
-          </p>
-          <a href="/services.html" class="inline-flex items-center gap-2 text-laterite-clay font-bold hover:gap-4 transition-all">
+          <span class="text-xs uppercase tracking-widest text-[#F2D7BA] font-bold mb-4 block">CAPABILITIES</span>
+          <h2 id="capabilities-heading" class="text-4xl md:text-5xl font-black mb-6 leading-tight">Three divisions. One accountable team.</h2>
+          <p class="text-lg leading-relaxed mb-8 opacity-90">Baytree handles the full lifecycle — design, materials, construction — so there's one team accountable for the outcome. Our OEM partnerships with Techfab India, Inland Tarp &amp; Liner, and Terraforce deliver results up to 60% faster.</p>
+          <a href="./services.html" class="inline-flex items-center gap-2 text-[#F2D7BA] font-bold hover:gap-4 transition-all">
             View All Services
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
         </div>
-
         <div class="grid gap-6 animate-on-scroll delay-100">
-          <div class="bg-white/10 p-6 rounded-lg border border-white/20">
-            <h3 class="text-xl font-bold mb-2">Geosynthetics Engineering</h3>
-            <p class="opacity-80">Reinforcement systems, drainage solutions, erosion control</p>
+          <div class="bg-white/10 p-6 rounded-xl border border-white/20">
+            <h3 class="text-xl font-bold mb-2">Marine &amp; Coastal Infrastructure</h3>
+            <p class="opacity-80 text-sm">Shoreline defence, revetments, seawalls, waterfronts, and erosion control.</p>
           </div>
-          <div class="bg-white/10 p-6 rounded-lg border border-white/20">
-            <h3 class="text-xl font-bold mb-2">Marine &amp; Coastal Protection</h3>
-            <p class="opacity-80">Shoreline stabilization, breakwater construction, scour protection</p>
+          <div class="bg-white/10 p-6 rounded-xl border border-white/20">
+            <h3 class="text-xl font-bold mb-2">Public Works &amp; Civil Engineering</h3>
+            <p class="opacity-80 text-sm">Roads, drainage, bridges, civic facilities, and river training.</p>
           </div>
-          <div class="bg-white/10 p-6 rounded-lg border border-white/20">
-            <h3 class="text-xl font-bold mb-2">Civil Infrastructure</h3>
-            <p class="opacity-80">Highway construction, drainage systems, ground improvement</p>
+          <div class="bg-white/10 p-6 rounded-xl border border-white/20">
+            <h3 class="text-xl font-bold mb-2">Integrated Construction Solutions</h3>
+            <p class="opacity-80 text-sm">Structural development and engineered building supply with installation and commissioning.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── OEM PARTNERS STRIP ── -->
+  <section class="py-16 bg-oyster border-y border-silver/30" aria-label="Technology partners">
+    <div class="container mx-auto px-6 md:px-12 lg:px-20">
+      <div class="text-center mb-10">
+        <p class="text-xs uppercase tracking-widest text-laterite-clay font-bold mb-2">Technology Partners</p>
+        <h2 class="text-2xl font-black text-forest-green">World-class solutions through OEM partnerships</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="partner-card animate-on-scroll">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="partner-logo-area">
+              <span class="text-forest-green font-black text-xs uppercase tracking-tight text-center leading-tight p-2">Techfab<br>India</span>
+            </div>
+            <h3 class="font-bold text-forest-green text-lg">Techfab India</h3>
+          </div>
+          <p class="text-concrete-grey text-sm leading-relaxed">Leading manufacturer of geosynthetics: geotextiles, geogrids, geocells, geotubes, and the advanced TechMatt concrete mattress system trusted globally for hydraulic and geotechnical applications.</p>
+        </div>
+        <div class="partner-card animate-on-scroll delay-100">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="partner-logo-area">
+              <span class="text-forest-green font-black text-xs uppercase tracking-tight text-center leading-tight p-2">Inland<br>Tarp</span>
+            </div>
+            <h3 class="font-bold text-forest-green text-lg">Inland Tarp &amp; Liner</h3>
+          </div>
+          <p class="text-concrete-grey text-sm leading-relaxed">U.S.-based manufacturer of high-performance geomembranes, liners, and containment solutions. Precision fabrication for demanding conditions in marine, civil, and industrial projects.</p>
+        </div>
+        <div class="partner-card animate-on-scroll delay-200">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="partner-logo-area">
+              <span class="text-forest-green font-black text-xs uppercase tracking-tight text-center leading-tight p-2">Terra<br>force</span>
+            </div>
+            <h3 class="font-bold text-forest-green text-lg">Terraforce</h3>
+          </div>
+          <p class="text-concrete-grey text-sm leading-relaxed">Globally recognised leader in modular retaining wall systems with 45+ years of proven performance. Hollow-core, interlocking concrete blocks that promote vegetation growth and slope stabilisation.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ── TESTIMONIALS ── -->
-  <section class="py-20 md:py-32 bg-oyster" aria-labelledby="testimonials-heading">
+  <section class="py-20 md:py-32 bg-white" aria-labelledby="testimonials-heading">
     <div class="container mx-auto px-6 md:px-12 lg:px-20">
       <div class="text-center mb-16">
         <span class="section-divider mx-auto"></span>
         <h2 id="testimonials-heading" class="text-4xl md:text-5xl font-black text-forest-green mb-4">What clients say</h2>
         <p class="text-lg text-concrete-grey max-w-xl mx-auto">Built on trust. Measured by outcomes.</p>
       </div>
-
       <div class="grid md:grid-cols-3 gap-8">
-
-        <article class="testimonial-card rounded-lg animate-on-scroll">
+        <article class="testimonial-card rounded-xl animate-on-scroll">
           <div class="testimonial-quote">&ldquo;</div>
-          <p class="text-concrete-grey leading-relaxed mb-6">
-            BayTree delivered our coastal erosion project on time and to specification. Their geosynthetics expertise is second to none — the shoreline has held through two full storm seasons.
-          </p>
+          <p class="text-concrete-grey leading-relaxed mb-6 text-sm">BayTree delivered our coastal erosion project on time and to specification. Their geosynthetics expertise is second to none — the shoreline has held through two full storm seasons.</p>
           <footer class="border-t border-silver/40 pt-4">
             <div class="font-bold text-charcoal">Engr. Chukwuemeka Eze</div>
             <div class="text-sm text-concrete-grey">Director of Works, Delta State Government</div>
           </footer>
         </article>
-
-        <article class="testimonial-card rounded-lg animate-on-scroll delay-100">
+        <article class="testimonial-card rounded-xl animate-on-scroll delay-100">
           <div class="testimonial-quote">&ldquo;</div>
-          <p class="text-concrete-grey leading-relaxed mb-6">
-            We brought Baytree in after a previous contractor failed on a drainage scheme. They assessed, redesigned, and delivered. Their motto "we own the whole job" is not marketing — they mean it.
-          </p>
+          <p class="text-concrete-grey leading-relaxed mb-6 text-sm">We brought Baytree in after a previous contractor failed on a drainage scheme. They assessed, redesigned, and delivered. Their motto "we own the whole job" is not marketing — they mean it.</p>
           <footer class="border-t border-silver/40 pt-4">
             <div class="font-bold text-charcoal">Biodun Adeyemi</div>
             <div class="text-sm text-concrete-grey">Infrastructure Lead, Lagos State Roads Authority</div>
           </footer>
         </article>
-
-        <article class="testimonial-card rounded-lg animate-on-scroll delay-200">
+        <article class="testimonial-card rounded-xl animate-on-scroll delay-200">
           <div class="testimonial-quote">&ldquo;</div>
-          <p class="text-concrete-grey leading-relaxed mb-6">
-            The ground reinforcement work under our industrial facility was flawless. Five years on, zero settlement issues. BayTree's precision on the subsurface gave us confidence to build a second phase.
-          </p>
+          <p class="text-concrete-grey leading-relaxed mb-6 text-sm">The ground reinforcement work under our industrial facility was flawless. Five years on, zero settlement issues. BayTree's precision on the subsurface gave us confidence to build a second phase.</p>
           <footer class="border-t border-silver/40 pt-4">
             <div class="font-bold text-charcoal">Amara Nwosu</div>
             <div class="text-sm text-concrete-grey">Project Director, Lekki Free Zone Development</div>
           </footer>
         </article>
+      </div>
+    </div>
+  </section>
 
+  <!-- ── CTA BAND ── -->
+  <section class="py-20 bg-oyster text-center">
+    <div class="container mx-auto px-6 md:px-12 lg:px-20 max-w-3xl">
+      <span class="section-divider mx-auto"></span>
+      <h2 class="text-4xl font-black text-forest-green mb-4">Ready to build something that lasts?</h2>
+      <p class="text-lg text-concrete-grey mb-8">Tell us about your project. We'll respond within 24 hours.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="./contact.html"  class="paper-btn-primary">Start a Project</a>
+        <a href="./projects.html" class="paper-btn-secondary">View Our Work</a>
       </div>
     </div>
   </section>
   </main>
 
   <!-- ── FOOTER ── -->
-  <footer class="bg-forest-green text-white py-16">
+  <footer class="site-footer bg-forest-green text-white py-16">
     <div class="container mx-auto px-6 md:px-12 lg:px-20">
       <div class="grid md:grid-cols-4 gap-12 mb-12">
-
         <div class="md:col-span-2">
-          <div class="flex items-center gap-4 mb-6">
+          <div class="flex items-center gap-4 mb-4">
             <div class="flex flex-col gap-0.5 w-10">
               <div class="h-1.5 bg-white rounded-sm opacity-100"></div>
               <div class="h-1.5 bg-white rounded-sm opacity-85"></div>
@@ -312,39 +383,67 @@
               <div class="text-xs uppercase tracking-widest opacity-60 mt-0.5">Engineering &amp; Construction</div>
             </div>
           </div>
-          <p class="text-sm opacity-70 leading-relaxed max-w-sm">
-            We build the things people don't see. Layered infrastructure systems designed to last decades.
-          </p>
+          <p class="text-sm opacity-70 leading-relaxed max-w-sm mb-6">Engineering Tomorrow's Infrastructure — Durable, Sustainable, Unmatched. Based in Lagos, delivering across Nigeria and beyond.</p>
+          <!-- Social icons -->
+          <div class="flex gap-3">
+            <a href="https://www.instagram.com/baytreeengineering" class="footer-social-btn" aria-label="Instagram" rel="noopener noreferrer" target="_blank">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Facebook" rel="noopener noreferrer" target="_blank">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Twitter / X" rel="noopener noreferrer" target="_blank">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
         </div>
 
         <div>
           <h3 class="text-xs uppercase tracking-wider font-bold mb-5 text-laterite-clay">Quick Links</h3>
           <ul class="space-y-3 text-sm">
-            <li><a href="/"              class="opacity-70 hover:opacity-100 transition-opacity">Home</a></li>
-            <li><a href="/services.html" class="opacity-70 hover:opacity-100 transition-opacity">Services</a></li>
-            <li><a href="/projects.html" class="opacity-70 hover:opacity-100 transition-opacity">Projects</a></li>
-            <li><a href="/about.html"    class="opacity-70 hover:opacity-100 transition-opacity">About</a></li>
-            <li><a href="/contact.html"  class="opacity-70 hover:opacity-100 transition-opacity">Contact</a></li>
+            <li><a href="./index.html"              class="opacity-70 hover:opacity-100 transition-opacity">Home</a></li>
+            <li><a href="./services.html" class="opacity-70 hover:opacity-100 transition-opacity">Services</a></li>
+            <li><a href="./projects.html" class="opacity-70 hover:opacity-100 transition-opacity">Projects</a></li>
+            <li><a href="./about.html"    class="opacity-70 hover:opacity-100 transition-opacity">About</a></li>
+            <li><a href="./contact.html"  class="opacity-70 hover:opacity-100 transition-opacity">Contact</a></li>
           </ul>
         </div>
 
         <div>
           <h3 class="text-xs uppercase tracking-wider font-bold mb-5 text-laterite-clay">Contact</h3>
           <ul class="space-y-3 text-sm opacity-70">
-            <li>Lagos, Nigeria</li>
-            <li><a href="mailto:info@baytreeng.com" class="hover:opacity-100 transition-opacity">info@baytreeng.com</a></li>
-            <li><a href="tel:+2340000000000"        class="hover:opacity-100 transition-opacity">+234 000 000 0000</a></li>
+            <li>Plot 6 Idowu Olaitan Street,<br>Gbagada Phase 2, Lagos</li>
+            <li><a href="mailto:info@baytreeng.com"   class="hover:opacity-100 transition-opacity">info@baytreeng.com</a></li>
+            <li><a href="tel:+2348057777724"           class="hover:opacity-100 transition-opacity">+234 805 777 7724</a></li>
+            <li><a href="tel:+2348039458755"           class="hover:opacity-100 transition-opacity">+234 803 945 8755</a></li>
+            <li><a href="https://wa.me/2348057777724" class="hover:opacity-100 transition-opacity flex items-center gap-2" rel="noopener noreferrer" target="_blank">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a></li>
           </ul>
         </div>
       </div>
 
-      <div class="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm opacity-60">
+      <div class="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/70">
         <p>&copy; 2026 BayTree Engineering &amp; Construction Limited. All rights reserved.</p>
         <p>Website by <a href="https://onenetservers.net" class="text-laterite-clay hover:text-white transition-colors" rel="noopener noreferrer" target="_blank">OneNet Servers</a></p>
       </div>
     </div>
   </footer>
 
-  <script src="./assets/js/main.js" defer></script>
+  <!-- ── WHATSAPP FAB ── -->
+  <a href="https://wa.me/2348057777724?text=Hello%20BayTree%2C%20I%20would%20like%20to%20discuss%20a%20project." class="whatsapp-fab" aria-label="Chat on WhatsApp" rel="noopener noreferrer" target="_blank">
+    <span class="whatsapp-fab-tooltip">Chat with us</span>
+    <div class="whatsapp-fab-bubble">
+      <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </div>
+  </a>
+
+  <script src="./assets/js/main.min.js" defer></script>
 </body>
 </html>

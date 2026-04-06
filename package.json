@@ -4,10 +4,15 @@
   "description": "BayTree Engineering & Construction — Official Website",
   "scripts": {
     "dev": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --watch",
-    "build": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --minify",
+    "build:css": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/main.css --minify",
+    "build:js": "npx terser ./assets/js/main.js --compress --mangle --output ./assets/js/main.min.js",
+    "build": "npm run build:css && npm run build:js",
     "start": "npx serve . -p 3000"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.0"
+    "axe-core": "^4.11.2",
+    "playwright-core": "^1.59.1",
+    "tailwindcss": "^3.4.0",
+    "terser": "^5.46.1"
   }
 }

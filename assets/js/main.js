@@ -5,45 +5,53 @@
 
 'use strict';
 
-// ── Sticky header ──────────────────────────────────────────────────────────
+// ── Header (always white/solid — no transparency conflict with slider) ─────
 function initHeader() {
   const header = document.getElementById('header');
   if (!header) return;
-
+  // Header is always white; add shadow on scroll for depth feedback
   const onScroll = () => {
-    if (window.pageYOffset > 80) {
-      header.classList.add('bg-white', 'shadow-md');
-    } else {
-      header.classList.remove('bg-white', 'shadow-md');
-    }
+    header.classList.toggle('shadow-md', window.pageYOffset > 20);
   };
-
   window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll(); // run once on load
+  onScroll();
 }
 
-// ── Mobile menu ────────────────────────────────────────────────────────────
-function initMobileMenu() {
-  const toggle = document.getElementById('menu-toggle');
-  const menu   = document.getElementById('mobile-menu');
-  if (!toggle || !menu) return;
+// ── Mobile drawer ──────────────────────────────────────────────────────────
+function initDrawer() {
+  const toggleBtn = document.getElementById('menu-toggle');
+  const closeBtn  = document.getElementById('drawer-close');
+  const drawer    = document.getElementById('mobile-drawer');
+  const overlay   = document.getElementById('drawer-overlay');
+  if (!toggleBtn || !drawer) return;
 
-  toggle.addEventListener('click', () => {
-    const isOpen = !menu.classList.contains('hidden');
-    menu.classList.toggle('hidden', isOpen);
-    toggle.setAttribute('aria-expanded', String(!isOpen));
-  });
+  function open() {
+    drawer.classList.add('open');
+    overlay?.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    toggleBtn.setAttribute('aria-expanded', 'true');
+    closeBtn?.focus();
+  }
 
-  // Close menu on outside click
-  document.addEventListener('click', (e) => {
-    if (!toggle.contains(e.target) && !menu.contains(e.target)) {
-      menu.classList.add('hidden');
-      toggle.setAttribute('aria-expanded', 'false');
-    }
+  function close() {
+    drawer.classList.remove('open');
+    overlay?.classList.remove('open');
+    document.body.style.overflow = '';
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    toggleBtn.focus();
+  }
+
+  toggleBtn.addEventListener('click', open);
+  closeBtn?.addEventListener('click', close);
+  overlay?.addEventListener('click', close);
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && drawer.classList.contains('open')) close();
   });
 }
 
-// ── Scroll animations (IntersectionObserver) ───────────────────────────────
+// ── Scroll animations ──────────────────────────────────────────────────────
 function initScrollAnimations() {
   const elements = document.querySelectorAll('.animate-on-scroll');
   if (!elements.length) return;
@@ -62,8 +70,8 @@ function initScrollAnimations() {
 
 // ── Hero slider ────────────────────────────────────────────────────────────
 function initSlider() {
-  const slides = document.querySelectorAll('.hero-slide');
-  const dots   = document.querySelectorAll('.slider-dot');
+  const slides  = document.querySelectorAll('.hero-slide');
+  const dots    = document.querySelectorAll('.slider-dot');
   const prevBtn = document.getElementById('slider-prev');
   const nextBtn = document.getElementById('slider-next');
   if (!slides.length) return;
@@ -79,22 +87,15 @@ function initSlider() {
     dots[current]?.classList.add('active');
   }
 
-  function startAuto() {
-    autoTimer = setInterval(() => goTo(current + 1), 5000);
-  }
-
-  function resetAuto() {
-    clearInterval(autoTimer);
-    startAuto();
-  }
+  function startAuto() { autoTimer = setInterval(() => goTo(current + 1), 5000); }
+  function resetAuto()  { clearInterval(autoTimer); startAuto(); }
 
   prevBtn?.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
   nextBtn?.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
   dots.forEach((dot, i) => dot.addEventListener('click', () => { goTo(i); resetAuto(); }));
 
-  // Keyboard support
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') { goTo(current - 1); resetAuto(); }
+    if (e.key === 'ArrowLeft')  { goTo(current - 1); resetAuto(); }
     if (e.key === 'ArrowRight') { goTo(current + 1); resetAuto(); }
   });
 
@@ -112,31 +113,27 @@ function initPortfolioFilter() {
     btn.addEventListener('click', () => {
       filterBtns.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
-
       const cat = btn.dataset.filter;
       cards.forEach((card) => {
         const show = cat === 'all' || card.dataset.category === cat;
         card.style.display = show ? '' : 'none';
-        if (show) card.classList.add('animate-on-scroll', 'visible');
       });
     });
   });
 }
 
-// ── Contact form ───────────────────────────────────────────────────────────
+// ── Contact form (Web3Forms) ───────────────────────────────────────────────
 function initContactForm() {
-  const form    = document.getElementById('contact-form');
-  const result  = document.getElementById('form-result');
+  const form   = document.getElementById('contact-form');
+  const result = document.getElementById('form-result');
   if (!form) return;
 
-  // Honeypot check + rate limiting
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const botcheck = form.querySelector('[name="botcheck"]');
-    if (botcheck && botcheck.value) return; // bot detected
+    if (botcheck && botcheck.value) return;
 
-    // Rate limit: 1 submission per session
     if (sessionStorage.getItem('bt_submitted')) {
       showResult('You have already submitted an inquiry this session. We will be in touch soon.', 'info');
       return;
@@ -146,13 +143,9 @@ function initContactForm() {
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending…';
 
-    const data = new FormData(form);
-
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
+      const res  = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' }
       });
       const json = await res.json();
 
@@ -185,7 +178,7 @@ function initContactForm() {
 // ── Boot ───────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
-  initMobileMenu();
+  initDrawer();
   initScrollAnimations();
   initSlider();
   initPortfolioFilter();

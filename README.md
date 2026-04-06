@@ -1,177 +1,63 @@
 # BayTree Engineering & Construction
-## Website Prototype
 
-**Design System:** Minimal, honest, infrastructure-focused  
-**Built with:** Tailwind CSS (CDN) + Vanilla JavaScript  
-**Brand Colors:** Forest Green (#2A4B20), Laterite Clay (#A8763E)
+Production-ready static website for BayTree Engineering & Construction.
 
----
+## Stack
+- HTML (multi-page site)
+- Tailwind CSS v3 (compiled from `assets/css/input.css`)
+- Vanilla JavaScript (`assets/js/main.js`, minified to `assets/js/main.min.js`)
 
-## Quick Start
+## Pages
+- `index.html`
+- `services.html`
+- `projects.html`
+- `about.html`
+- `contact.html`
 
-1. **Open `index.html` in a browser** - No build step required (using Tailwind CDN)
-2. **For development:** Open in VS Code with Live Server extension
-3. **For production:** Build with actual Tailwind CLI (see package.json)
+Legacy file:
+- `index (2).html` is retained only as an archive variant and is set to `noindex`.
 
----
-
-## File Structure
-
-```
-baytree-website/
-├── index.html              # Homepage (COMPLETE)
-├── services.html           # Services page (template)
-├── projects.html           # Projects portfolio (template)
-├── about.html              # Company story (template)
-├── contact.html            # Contact form (template)
-├── package.json            # Build configuration
-├── tailwind.config.js      # Tailwind with brand colors
-└── assets/
-    ├── css/
-    │   └── input.css       # Custom Paper components
-    └── images/             # Logo SVGs and project imagery
-```
-
----
-
-## Brand Implementation
-
-### Logo (Five Strata Bars)
-```html
-<div class="flex flex-col gap-0.5 w-12">
-    <div class="h-1.5 bg-forest-green rounded-sm opacity-100"></div>
-    <div class="h-1.5 bg-forest-green rounded-sm opacity-85"></div>
-    <div class="h-1.5 bg-moss rounded-sm opacity-70"></div>
-    <div class="h-1.5 bg-sage rounded-sm opacity-55"></div>
-    <div class="h-1.5 bg-sage rounded-sm opacity-40"></div>
-</div>
-```
-
-### Color Usage
-- **Forest Green** (#2A4B20) - Primary, dominates 60-70%
-- **Laterite Clay** (#A8763E) - Accent, dividers/highlights only
-- **Concrete Grey** (#6C706C) - Body text
-- **Oyster** (#F6F4EF) - Section backgrounds
-
-### Typography
-- **Lato** from Google Fonts
-- Weights: 300 (Light), 400 (Regular), 700 (Bold), 900 (Black)
-- All caps for labels/metadata
-
----
-
-## Features Implemented
-
-### Homepage ✅
-- Hero section with five strata bars logo
-- "We build what you don't see" headline
-- Four brand pillars (measure twice, go deep, own the job, build for decades)
-- Capabilities overview section
-- Featured projects grid
-- CTA section
-- Footer with branding
-
-### Components ✅
-- Sticky header with scroll behavior
-- Mobile menu (hamburger)
-- Paper design cards with hover effects
-- Scroll animations (fade-in-up)
-- Responsive grid layouts
-
-### Interactions ✅
-- Header background appears on scroll
-- Mobile menu toggle
-- Scroll-triggered animations
-- Card hover elevations
-- Button hover states
-
----
-
-## To Complete
-
-### Content Needed:
-1. **Project Images** - Replace gradient placeholders with actual project photography
-2. **About Page Content** - Company history, team, certifications
-3. **Services Detail** - Expand each service category with technical specs
-4. **Contact Info** - Real phone numbers, email, physical address
-5. **Logo SVG Files** - Export from brand guide and add to /assets/images/
-
-### Additional Pages:
-- Services (template structure ready)
-- Projects (portfolio grid ready)
-- About (company story template)
-- Contact (form template)
-
----
-
-## Build for Production
-
+## Local development
 ```bash
-# Install dependencies
 npm install
-
-# Development (watch mode)
 npm run dev
+```
 
-# Production build (minified)
+## Production build
+```bash
 npm run build
 ```
 
----
+Build outputs:
+- `assets/css/main.css` (minified)
+- `assets/js/main.min.js` (minified)
 
-## Design Principles Applied
+## Run locally (static server)
+```bash
+npm run start
+```
 
-### 1. Minimal Aesthetic
-✅ Clean typography hierarchy  
-✅ Generous white space (8px grid)  
-✅ Subtle shadows (Paper elevation)  
-✅ No unnecessary decoration  
+## SEO/Social setup
+Implemented across primary pages:
+- `title`, `description`, `robots`, `canonical`
+- Open Graph tags (`og:type`, `og:url`, `og:title`, `og:description`, `og:image`)
+- Twitter card tags (`twitter:card`, `twitter:image`)
+- Favicon: `assets/images/BT_Strata_Icon_Forest.png`
+- OG image: `assets/images/og-image.png`
 
-### 2. Honest Representation
-✅ Five bars = actual layered infrastructure systems  
-✅ Straightforward language ("We measure twice" not "world-class")  
-✅ Technical accuracy in descriptions  
-✅ Project imagery over illustrations (when added)  
+## Key paths
+- Source styles: `assets/css/input.css`
+- Built styles: `assets/css/main.css`
+- Source JS: `assets/js/main.js`
+- Built JS: `assets/js/main.min.js`
+- Shared assets: `assets/images/`
 
-### 3. Color Restraint
-✅ Forest Green dominates  
-✅ Laterite only for accents  
-✅ Maximum 3 colors per section  
-✅ White/Oyster backgrounds  
-
----
-
-## Performance Checklist
-
-- [ ] Replace Tailwind CDN with compiled CSS (production)
-- [ ] Optimize images (WebP format, lazy loading)
-- [ ] Add meta tags for SEO
-- [ ] Test responsive breakpoints
-- [ ] Cross-browser testing
-- [ ] Accessibility audit (WCAG AA)
-- [ ] Add favicon
-- [ ] Add OG image for social sharing
-
----
-
-## Browser Support
-
-- Chrome/Edge (last 2 versions)
-- Firefox (last 2 versions)
-- Safari (last 2 versions)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
----
-
-## Credits
-
-**Design & Development:** OneNet Servers  
-**Brand Identity:** Approved BayTree Brand Guide (April 2026)  
-**Design System:** Paper-inspired minimal components  
-**Framework:** Tailwind CSS
-
----
+## Remaining work (non-P0)
+- Convert/optimize imagery to WebP where appropriate
+- Responsive QA across all breakpoints
+- Cross-browser QA (Chrome, Safari, Firefox, Edge)
+- Full WCAG AA accessibility audit
+- Add logo SVG exports and final project photography set
 
 ## License
-
 Proprietary - BayTree Engineering & Construction Limited © 2026

@@ -7,8 +7,8 @@ module.exports = {
     extend: {
       colors: {
         'forest-green': '#2A4B20',
-        'laterite-clay': '#A8763E',
-        'concrete-grey': '#6C706C',
+        'laterite-clay': '#5C3614',
+        'concrete-grey': '#414741',
         'charcoal': '#262826',
         'moss': '#446B35',
         'sage': '#809870',
