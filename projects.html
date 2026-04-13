@@ -474,12 +474,8 @@
 
       </div>
 
-      <!-- Load More -->
-      <div class="text-center mt-12">
-        <button id="load-more-btn" class="paper-btn-secondary" type="button" aria-label="Load more projects">
-          Load More Projects
-        </button>
-      </div>
+      <!-- Scroll sentinel for lazy reveal -->
+      <div id="projects-sentinel" class="h-4 mt-8" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -579,71 +575,72 @@
 
   <script>
   (function () {
-    var INITIAL = 6;
-    var BATCH   = 3;
-    var btn     = document.getElementById('load-more-btn');
+    var INITIAL  = 6;
+    var BATCH    = 3;
+    var sentinel = document.getElementById('projects-sentinel');
 
-    /* Return all project articles, sorted by DOM order */
     function allCards() {
       return Array.from(document.querySelectorAll('#projects-grid [data-category]'));
     }
 
-    /* Cards currently visible after the active filter (not filter-hidden) */
+    /* Cards in the active filter set (regardless of page-hidden) */
     function visibleCards() {
       return allCards().filter(function (c) {
         return !c.classList.contains('filter-hidden');
       });
     }
 
-    /* Apply / remove page-hidden so only the first N visible cards show */
-    function resetPagination() {
-      var cards = allCards();
-      /* Remove page-hidden from everything first */
-      cards.forEach(function (c) { c.classList.remove('page-hidden'); });
-
-      var visible = visibleCards();
-      /* Hide everything beyond the initial slice */
-      visible.slice(INITIAL).forEach(function (c) {
-        c.classList.add('page-hidden');
-      });
-
-      updateBtn();
-    }
-
-    function updateBtn() {
-      if (!btn) return;
-      var hasMore = visibleCards().some(function (c) {
+    /* Cards hidden by pagination within the current filter */
+    function queuedCards() {
+      return visibleCards().filter(function (c) {
         return c.classList.contains('page-hidden');
       });
-      btn.style.display = hasMore ? '' : 'none';
     }
 
-    /* Load More handler */
-    if (btn) {
-      btn.addEventListener('click', function () {
-        var hidden = visibleCards().filter(function (c) {
-          return c.classList.contains('page-hidden');
-        });
-        hidden.slice(0, BATCH).forEach(function (c) {
-          c.classList.remove('page-hidden');
-        });
-        updateBtn();
+    /* Reveal next BATCH cards */
+    function revealBatch() {
+      queuedCards().slice(0, BATCH).forEach(function (c) {
+        c.classList.remove('page-hidden');
       });
+      /* Stop observing once everything is revealed */
+      if (!queuedCards().length && observer && sentinel) {
+        observer.unobserve(sentinel);
+      }
     }
 
-    /* Re-run pagination after each filter click (after main.js updates filter-hidden) */
-    document.querySelectorAll('[data-filter]').forEach(function (filterBtn) {
-      filterBtn.addEventListener('click', function () {
+    /* Lazy-load observer — trigger 400px before sentinel enters viewport */
+    var observer = (sentinel && window.IntersectionObserver)
+      ? new IntersectionObserver(function (entries) {
+          if (entries[0].isIntersecting) revealBatch();
+        }, { rootMargin: '0px 0px 400px 0px' })
+      : null;
+
+    /* Reset pagination state (called on page load and after each filter change) */
+    function resetPagination() {
+      /* Clear all pagination-hiding */
+      allCards().forEach(function (c) { c.classList.remove('page-hidden'); });
+      /* Hide cards beyond the initial slice for the current filter */
+      visibleCards().slice(INITIAL).forEach(function (c) {
+        c.classList.add('page-hidden');
+      });
+      /* Reconnect sentinel observer if there are more cards to reveal */
+      if (observer && sentinel) {
+        observer.unobserve(sentinel);
+        if (queuedCards().length) {
+          observer.observe(sentinel);
+        }
+      }
+    }
+
+    /* Re-run after each filter click — defer so main.js sets filter-hidden first */
+    document.querySelectorAll('[data-filter]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
         setTimeout(resetPagination, 0);
       });
     });
 
-    /* Initial state — run after main.js DOMContentLoaded has fired */
     document.addEventListener('DOMContentLoaded', resetPagination);
-    /* Safety: if DOMContentLoaded already fired (script at end of body) */
-    if (document.readyState !== 'loading') {
-      resetPagination();
-    }
+    if (document.readyState !== 'loading') resetPagination();
   }());
   </script>
 </body>
