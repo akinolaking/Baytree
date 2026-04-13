@@ -103,6 +103,7 @@
   }
   .filter-btn.active { @apply bg-forest-green text-white border-forest-green; }
   [data-category].filter-hidden { display: none; }
+  [data-category].page-hidden   { display: none; }
 
   /* ── Process timeline ── */
   .timeline-step        { @apply flex flex-col items-center text-center; }
