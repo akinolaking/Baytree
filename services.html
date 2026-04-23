@@ -85,6 +85,10 @@
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
         Home
       </a>
+      <a href="./products.html" class="drawer-nav-link">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+        Products
+      </a>
       <a href="./services.html" class="drawer-nav-link active">
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
         Services
@@ -142,6 +146,20 @@
 
         <div class="hidden md:flex items-center gap-8">
           <a href="./index.html" class="text-sm font-bold uppercase tracking-wider text-charcoal hover:text-forest-green transition-colors">Home</a>
+          <div class="nav-dropdown-wrap" id="products-dropdown-wrap">
+            <button class="nav-dropdown-trigger text-sm font-bold uppercase tracking-wider text-charcoal hover:text-forest-green transition-colors flex items-center gap-1" aria-expanded="false" aria-haspopup="true" id="products-dropdown-btn">
+              Products
+              <svg class="w-3.5 h-3.5 nav-chevron transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="nav-dropdown-menu" id="products-dropdown-menu" role="menu" aria-labelledby="products-dropdown-btn">
+              <a href="./products.html#geosynthetic-systems"      class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-title">Geosynthetic Systems</span><span class="nav-dropdown-item-sub">Geocells, geotextiles, grout bags &amp; more</span></a>
+              <a href="./products.html#coastal-erosion-protection" class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-title">Coastal &amp; Erosion Protection</span><span class="nav-dropdown-item-sub">Mattresses, revetments &amp; shoreline defence</span></a>
+              <a href="./products.html#ground-stabilisation"       class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-title">Ground Stabilisation Systems</span><span class="nav-dropdown-item-sub">Interlocking concrete &amp; load platforms</span></a>
+              <a href="./products.html#urban-hardscape"            class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-title">Urban &amp; Hardscape Systems</span><span class="nav-dropdown-item-sub">Streetscape, hardscape &amp; landscape</span></a>
+              <a href="./products.html#anchoring-systems"          class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-title">Anchoring Systems</span><span class="nav-dropdown-item-sub">Concrete anchors &amp; tie-back solutions</span></a>
+              <a href="./products.html#custom-engineered"          class="nav-dropdown-item" role="menuitem"><span class="nav-dropdown-item-title">Custom Engineered Solutions</span><span class="nav-dropdown-item-sub">Bespoke fabrications for unique project needs</span></a>
+            </div>
+          </div>
           <a href="./services.html" class="text-sm font-bold uppercase tracking-wider text-forest-green">Services</a>
           <a href="./projects.html" class="text-sm font-bold uppercase tracking-wider text-charcoal hover:text-forest-green transition-colors">Projects</a>
           <a href="./about.html" class="text-sm font-bold uppercase tracking-wider text-charcoal hover:text-forest-green transition-colors">About</a>
@@ -457,7 +475,8 @@
         <div>
           <h3 class="text-xs uppercase tracking-wider font-bold mb-5 text-laterite-clay">Quick Links</h3>
           <ul class="space-y-3 text-sm">
-            <li><a href="./index.html"              class="opacity-70 hover:opacity-100 transition-opacity">Home</a></li>
+            <li><a href="./index.html" class="opacity-70 hover:opacity-100 transition-opacity">Home</a></li>
+            <li><a href="./products.html" class="opacity-70 hover:opacity-100 transition-opacity">Products</a></li>
             <li><a href="./services.html" class="opacity-70 hover:opacity-100 transition-opacity">Services</a></li>
             <li><a href="./projects.html" class="opacity-70 hover:opacity-100 transition-opacity">Projects</a></li>
             <li><a href="./about.html"    class="opacity-70 hover:opacity-100 transition-opacity">About</a></li>

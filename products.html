@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | BayTree Engineering &amp; Construction — Geosynthetics, Erosion Protection &amp; Anchoring Systems</title>
+  <meta name="description" content="BayTree Engineering supplies and installs geosynthetic systems, coastal erosion protection, ground stabilisation, urban hardscape, anchoring systems and custom engineered solutions across Nigeria.">
+  <meta name="keywords" content="geosynthetics Nigeria, geocells, geotextiles, grout bags, geotubes, geogrids, geomembranes, coastal protection Nigeria, ground stabilisation, anchoring systems, BayTree Engineering products">
+  <meta name="author" content="BayTree Engineering and Construction">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.baytreeng.com/products.html">
+  <meta property="og:type"        content="website">
+  <meta property="og:site_name"   content="BayTree Engineering &amp; Construction">
+  <meta property="og:url"         content="https://www.baytreeng.com/products.html">
+  <meta property="og:title"       content="Products | BayTree Engineering &amp; Construction">
+  <meta property="og:description" content="Geosynthetic systems, coastal erosion protection, ground stabilisation, urban hardscape, anchoring systems and custom engineered solutions.">
+  <meta property="og:image"       content="https://www.baytreeng.com/assets/images/og-image.png">
+  <meta property="og:locale"      content="en_NG">
+  <meta name="twitter:card"       content="summary_large_image">
+  <meta name="twitter:title"      content="Products | BayTree Engineering &amp; Construction">
+  <meta name="twitter:description" content="Geosynthetic systems, coastal erosion protection, ground stabilisation and more — supplied and installed across Nigeria.">
+  <meta name="twitter:image"      content="https://www.baytreeng.com/assets/images/og-image.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/BT_Strata_Icon_Forest.png">
+  <link rel="shortcut icon" href="./assets/images/BT_Strata_Icon_Forest.png">
+  <link rel="apple-touch-icon" href="./assets/images/BT_Strata_Icon_Forest.png">
+  <style>
+    /* ── Products page styles ── */
+    .products-hero {
+      background-color: #2A4B20;
+      padding: 7rem 0 5rem;
+    }
+    .category-nav {
+      position: sticky;
+      top: 72px;
+      z-index: 40;
+      background: white;
+      border-bottom: 1px solid rgba(180,180,170,0.3);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .category-nav::-webkit-scrollbar { display: none; }
+    .category-nav-inner {
+      display: flex;
+      gap: 0;
+      white-space: nowrap;
+      min-width: max-content;
+    }
+    .cat-tab {
+      padding: 1rem 1.25rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #5A5A5A;
+      border-bottom: 3px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      cursor: pointer;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+    .cat-tab:hover,
+    .cat-tab.active {
+      color: #2A4B20;
+      border-bottom-color: #2A4B20;
+    }
+    /* Product card grid */
+    .product-card {
+      background: white;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      border: 1px solid rgba(180,180,170,0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    .product-card-img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+      background: #E8E6E0;
+    }
+    .product-card-img-placeholder {
+      width: 100%;
+      aspect-ratio: 16/10;
+      background: #E8E6E0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .product-card-body {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #2A4B20;
+      margin-bottom: 0.5rem;
+    }
+    .product-card-desc {
+      font-size: 0.875rem;
+      color: #5A5A5A;
+      line-height: 1.6;
+      flex: 1;
+    }
+    .product-card-cta {
+      margin-top: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #2A4B20;
+      transition: gap 0.2s;
+    }
+    .product-card:hover .product-card-cta { gap: 0.65rem; }
+
+    /* List-style cards for non-geosynthetic categories */
+    .product-list-card {
+      background: white;
+      border-radius: 0.75rem;
+      padding: 1.75rem 2rem;
+      border: 1px solid rgba(180,180,170,0.25);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: flex-start;
+      gap: 1.25rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .product-list-card:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.09);
+      transform: translateY(-2px);
+    }
+    .product-list-icon {
+      width: 2.75rem;
+      height: 2.75rem;
+      min-width: 2.75rem;
+      border-radius: 50%;
+      background: #F2EFE8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Section anchor offset for sticky nav */
+    .section-anchor {
+      scroll-margin-top: 130px;
+    }
+  </style>
+</head>
+<body class="text-charcoal">
+
+  <!-- ── DRAWER OVERLAY ── -->
+  <div id="drawer-overlay" class="drawer-overlay !z-60" aria-hidden="true"></div>
+
+  <!-- ── MOBILE DRAWER ── -->
+  <nav id="mobile-drawer" class="mobile-drawer !z-70" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <a href="./index.html" class="flex items-center gap-3">
+        <div class="flex flex-col gap-0.5 w-8">
+          <div class="h-1.5 bg-forest-green rounded-sm"></div>
+          <div class="h-1.5 bg-forest-green rounded-sm opacity-80"></div>
+          <div class="h-1.5 bg-moss    rounded-sm opacity-65"></div>
+          <div class="h-1.5 bg-sage    rounded-sm opacity-50"></div>
+          <div class="h-1.5 bg-sage    rounded-sm opacity-35"></div>
+        </div>
+        <span class="font-black text-forest-green uppercase tracking-tight text-lg">BAYTREE</span>
+      </a>
+      <button id="drawer-close" class="p-2 rounded-lg hover:bg-oyster transition-colors" aria-label="Close menu">
+        <svg class="w-6 h-6 text-charcoal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="drawer-nav">
+      <a href="./index.html" class="drawer-nav-link">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        Home
+      </a>
+      <a href="./products.html" class="drawer-nav-link active">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+        Products
+      </a>
+      <a href="./services.html" class="drawer-nav-link">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+        Services
+      </a>
+      <a href="./projects.html" class="drawer-nav-link">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+        Projects
+      </a>
+      <a href="./about.html" class="drawer-nav-link">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        About
+      </a>
+      <div class="pt-4 mt-4 border-t border-silver/30">
+        <a href="./contact.html" class="paper-btn-primary w-full text-center block">Get in Touch</a>
+      </div>
+    </div>
+
+    <div class="drawer-footer">
+      <p class="text-xs uppercase tracking-wider text-concrete-grey font-bold">Follow us</p>
+      <div class="drawer-social-row">
+        <a href="#" class="drawer-social-btn" aria-label="Instagram">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="#" class="drawer-social-btn" aria-label="Facebook">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="#" class="drawer-social-btn" aria-label="LinkedIn">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="#" class="drawer-social-btn" aria-label="Twitter / X">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── HEADER ── -->
+  <header id="header" class="fixed w-full top-0 z-50 bg-white transition-shadow duration-300">
+    <div class="container mx-auto px-6 md:px-12 lg:px-20">
+      <nav class="flex items-center justify-between py-4">
+        <a href="./index.html" class="flex items-center gap-4" aria-label="BayTree home">
+          <div class="flex flex-col gap-0.5 w-10">
+            <div class="h-1.5 bg-forest-green rounded-sm opacity-100"></div>
+            <div class="h-1.5 bg-forest-green rounded-sm opacity-85"></div>
+            <div class="h-1.5 bg-moss    rounded-sm opacity-70"></div>
+            <div class="h-1.5 bg-sage    rounded-sm opacity-55"></div>
+            <div class="h-1.5 bg-sage    rounded-sm opacity-40"></div>
+          </div>
+          <div>
+            <div class="text-xl font-black text-forest-green uppercase tracking-tight leading-none">BAYTREE</div>
+            <div class="text-xs uppercase tracking-widest text-concrete-grey leading-none mt-0.5">Engineering &amp; Construction</div>
+          </div>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a href="./index.html" class="text-sm font-bold uppercase tracking-wider text-charcoal hover:text-forest-green transition-colors">Home</a>
+
+          <!-- Products dropdown -->
+          <div class="nav-dropdown-wrap" id="products-dropdown-wrap">
+            <button class="nav-dropdown-trigger text-sm font-bold uppercase tracking-wider text-forest-green flex items-center gap-1" aria-expanded="false" aria-haspopup="true" id="products-dropdown-btn">
+              Products
+              <svg class="w-3.5 h-3.5 nav-chevron transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="nav-dropdown-menu" id="products-dropdown-menu" role="menu" aria-labelledby="products-dropdown-btn">
+              <a href="./products.html#geosynthetic-systems" class="nav-dropdown-item" role="menuitem">
+                <span class="nav-dropdown-item-title">Geosynthetic Systems</span>
+                <span class="nav-dropdown-item-sub">Geocells, geotextiles, grout bags &amp; more</span>
+              </a>
+              <a href="./products.html#coastal-erosion-protection" class="nav-dropdown-item" role="menuitem">
+                <span class="nav-dropdown-item-title">Coastal &amp; Erosion Protection</span>
+                <span class="nav-dropdown-item-sub">Mattresses, revetments &amp; shoreline defence</span>
+              </a>
+              <a href="./products.html#ground-stabilisation" class="nav-dropdown-item" role="menuitem">
+                <span class="nav-dropdown-item-title">Ground Stabilisation Systems</span>
+                <span class="nav-dropdown-item-sub">Interlocking concrete &amp; load platforms</span>
+              </a>
+              <a href="./products.html#urban-hardscape" class="nav-dropdown-item" role="menuitem">
+                <span class="nav-dropdown-item-title">Urban &amp; Hardscape Systems</span>
+                <span class="nav-dropdown-item-sub">Streetscape, hardscape &amp; landscape</span>
+              </a>
+              <a href="./products.html#anchoring-systems" class="nav-dropdown-item" role="menuitem">
+                <span class="nav-dropdown-item-title">Anchoring Systems</span>
+                <span class="nav-dropdown-item-sub">Concrete anchors &amp; tie-back solutions</span>
+              </a>
+              <a href="./products.html#custom-engineered" class="nav-dropdown-item" role="menuitem">
+                <span class="nav-dropdown-item-title">Custom Engineered Solutions</span>
+                <span class="nav-dropdown-item-sub">Bespoke fabrications for unique project needs</span>
+              </a>
+            </div>
+          </div>
+
+          <a href="./services.html" class="text-sm font-bold uppercase tracking-wider text-charcoal hover:text-forest-green transition-colors">Services</a>
+          <a href="./projects.html" class="text-sm font-bold uppercase tracking-wider text-charcoal hover:text-forest-green transition-colors">Projects</a>
+          <a href="./about.html"    class="text-sm font-bold uppercase tracking-wider text-charcoal hover:text-forest-green transition-colors">About</a>
+          <a href="./contact.html"  class="paper-btn-primary !py-3 !px-6 text-sm">Contact</a>
+        </div>
+
+        <button id="menu-toggle" class="md:hidden p-2 rounded-lg hover:bg-oyster transition-colors text-forest-green" aria-label="Open menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ── HERO ── -->
+    <section class="products-hero" aria-label="Products hero">
+      <div class="container mx-auto px-6 md:px-12 lg:px-20">
+        <div class="max-w-3xl pt-6">
+          <span class="text-xs uppercase tracking-widest text-[#F2D7BA] font-bold mb-4 block">Our Products</span>
+          <h1 class="text-5xl md:text-6xl font-black text-white leading-tight mb-6">
+            Engineered materials.<br>Built to perform.
+          </h1>
+          <p class="text-lg text-white/80 leading-relaxed max-w-2xl">
+            From geosynthetic systems that stabilise weak ground to coastal defences that hold back the sea — every product we supply is engineered for Nigerian conditions and installed with precision.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CATEGORY STICKY NAV ── -->
+    <div class="category-nav" role="navigation" aria-label="Product categories">
+      <div class="container mx-auto px-6 md:px-12 lg:px-20">
+        <div class="category-nav-inner">
+          <a href="#geosynthetic-systems"      class="cat-tab active" data-cat="geosynthetic-systems">Geosynthetic Systems</a>
+          <a href="#coastal-erosion-protection" class="cat-tab" data-cat="coastal-erosion-protection">Coastal &amp; Erosion</a>
+          <a href="#ground-stabilisation"       class="cat-tab" data-cat="ground-stabilisation">Ground Stabilisation</a>
+          <a href="#urban-hardscape"            class="cat-tab" data-cat="urban-hardscape">Urban &amp; Hardscape</a>
+          <a href="#anchoring-systems"          class="cat-tab" data-cat="anchoring-systems">Anchoring Systems</a>
+          <a href="#custom-engineered"          class="cat-tab" data-cat="custom-engineered">Custom Engineered</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 1 — GEOSYNTHETIC SYSTEMS
+    ═══════════════════════════════════════════════ -->
+    <section id="geosynthetic-systems" class="section-anchor py-20 md:py-28 bg-white" aria-labelledby="geosynthetic-heading">
+      <div class="container mx-auto px-6 md:px-12 lg:px-20">
+
+        <div class="mb-14">
+          <span class="text-xs uppercase tracking-widest text-laterite-clay font-bold mb-3 block">Category 01</span>
+          <span class="section-divider"></span>
+          <h2 id="geosynthetic-heading" class="text-4xl md:text-5xl font-black text-forest-green mb-5 mt-4">Geosynthetic Systems</h2>
+          <p class="text-lg text-concrete-grey leading-relaxed max-w-3xl">
+            Our geosynthetic systems are engineered to improve soil performance, control erosion, and enhance load distribution in civil and infrastructure projects. By reinforcing and stabilising weak ground conditions, these solutions deliver long-term durability and cost efficiency across a wide range of applications.
+          </p>
+        </div>
+
+        <!-- 3-col desktop / 2-col tablet / 1-col mobile card grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- 1. Geocells -->
+          <a href="./contact.html?product=geocells" class="product-card animate-on-scroll" aria-label="Geocells — enquire">
+            <img src="./assets/images/projects/geocell-agbede.jpg"
+                 alt="Geocell panels installed on-site at Agbede, Edo State"
+                 class="product-card-img"
+                 loading="lazy">
+            <div class="product-card-body">
+              <h3 class="product-card-name">Geocells</h3>
+              <p class="product-card-desc">3D confinement systems for stabilising weak soils and improving load distribution.</p>
+              <span class="product-card-cta">
+                Enquire
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 2. Geotextiles -->
+          <a href="./contact.html?product=geotextiles" class="product-card animate-on-scroll delay-100" aria-label="Geotextiles — enquire">
+            <img src="./assets/images/projects/Supply%20and%20Installation%20of%20ACBM%20and%20Geotextile%20for%20NEWMAP%20Project%20%40%20Obomkpa%2C%20Delta%20State.jpeg"
+                 alt="Geotextile installation at NEWMAP project, Obomkpa, Delta State"
+                 class="product-card-img"
+                 loading="lazy">
+            <div class="product-card-body">
+              <h3 class="product-card-name">Geotextiles</h3>
+              <p class="product-card-desc">Permeable fabrics used for separation, filtration, and drainage in soil systems.</p>
+              <span class="product-card-cta">
+                Enquire
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 3. Grout Bags -->
+          <a href="./contact.html?product=grout-bags" class="product-card animate-on-scroll delay-200" aria-label="Grout Bags — enquire">
+            <div class="product-card-img-placeholder">
+              <svg class="w-12 h-12 text-concrete-grey opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
+            <div class="product-card-body">
+              <h3 class="product-card-name">Grout Bags</h3>
+              <p class="product-card-desc">High-strength fabric bags filled with grout to form durable, flexible concrete structures.</p>
+              <span class="product-card-cta">
+                Enquire
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 4. Geotubes -->
+          <a href="./contact.html?product=geotubes" class="product-card animate-on-scroll" aria-label="Geotubes — enquire">
+            <div class="product-card-img-placeholder">
+              <svg class="w-12 h-12 text-concrete-grey opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
+            <div class="product-card-body">
+              <h3 class="product-card-name">Geotubes</h3>
+              <p class="product-card-desc">Large geotextile containers used for dewatering, containment, and coastal defence.</p>
+              <span class="product-card-cta">
+                Enquire
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 5. Geogrids -->
+          <a href="./contact.html?product=geogrids" class="product-card animate-on-scroll delay-100" aria-label="Geogrids — enquire">
+            <div class="product-card-img-placeholder">
+              <svg class="w-12 h-12 text-concrete-grey opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
+            <div class="product-card-body">
+              <h3 class="product-card-name">Geogrids</h3>
+              <p class="product-card-desc">High-strength reinforcement grids that improve structural stability and load transfer.</p>
+              <span class="product-card-cta">
+                Enquire
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 6. Geomembranes -->
+          <a href="./contact.html?product=geomembranes" class="product-card animate-on-scroll delay-200" aria-label="Geomembranes — enquire">
+            <div class="product-card-img-placeholder">
+              <svg class="w-12 h-12 text-concrete-grey opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            </div>
+            <div class="product-card-body">
+              <h3 class="product-card-name">Geomembranes</h3>
+              <p class="product-card-desc">Impermeable liners for containment, waterproofing, and environmental protection.</p>
+              <span class="product-card-cta">
+                Enquire
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <!-- 7. Geobags -->
+          <a href="./contact.html?product=geobags" class="product-card animate-on-scroll" aria-label="Geobags — enquire">
+            <img src="./assets/images/projects/Gabion%20Woks%20in%20Calabar%2C%20Cross%20River%20State.jpeg"
+                 alt="Erosion control works in Calabar, Cross River State"
+                 class="product-card-img"
+                 loading="lazy">
+            <div class="product-card-body">
+              <h3 class="product-card-name">Geobags</h3>
+              <p class="product-card-desc">Fabric-formed units used for erosion control and shoreline stabilisation.</p>
+              <span class="product-card-cta">
+                Enquire
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 2 — COASTAL & EROSION PROTECTION
+    ═══════════════════════════════════════════════ -->
+    <section id="coastal-erosion-protection" class="section-anchor py-20 md:py-28 bg-oyster" aria-labelledby="coastal-heading">
+      <div class="container mx-auto px-6 md:px-12 lg:px-20">
+
+        <div class="mb-14">
+          <span class="text-xs uppercase tracking-widest text-laterite-clay font-bold mb-3 block">Category 02</span>
+          <span class="section-divider"></span>
+          <h2 id="coastal-heading" class="text-4xl md:text-5xl font-black text-forest-green mb-5 mt-4">Coastal &amp; Erosion Protection</h2>
+          <p class="text-lg text-concrete-grey leading-relaxed max-w-3xl">
+            Our coastal and erosion protection systems are designed to safeguard shorelines, riverbanks, and critical infrastructure from hydraulic forces and environmental degradation. These solutions provide robust, long-term protection against erosion, scouring, and wave impact.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <!-- Concrete Mattresses -->
+          <div class="product-list-card animate-on-scroll">
+            <div class="product-list-icon">
+              <svg class="w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-forest-green mb-2">Concrete Mattresses</h3>
+              <p class="text-sm text-concrete-grey leading-relaxed">Articulated concrete block mattresses (ACBM) for flexible, durable bank and channel protection. Includes hollow-core Terracrete blocks that promote vegetation establishment.</p>
+              <a href="./contact.html?product=concrete-mattresses" class="product-card-cta mt-3 inline-flex">
+                Enquire <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Grout-Filled Bags -->
+          <div class="product-list-card animate-on-scroll delay-100">
+            <div class="product-list-icon">
+              <svg class="w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-forest-green mb-2">Grout-Filled Bags</h3>
+              <p class="text-sm text-concrete-grey leading-relaxed">Fabric bags pumped with grout on-site to form a rigid, interlocking revetment. Available in 20kg, 25kg and 70kg configurations for varied application depths and exposures.</p>
+              <a href="./contact.html?product=grout-filled-bags" class="product-card-cta mt-3 inline-flex">
+                Enquire <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Revetment / ACBM Systems -->
+          <div class="product-list-card animate-on-scroll delay-200">
+            <div class="product-list-icon">
+              <svg class="w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-forest-green mb-2">Revetment / ACBM Systems</h3>
+              <p class="text-sm text-concrete-grey leading-relaxed">Engineered revetment systems combining geotextile underlayers with ACBM or concrete block facing for comprehensive slope and bank stabilisation against wave action and seepage.</p>
+              <a href="./contact.html?product=revetment-acbm" class="product-card-cta mt-3 inline-flex">
+                Enquire <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Featured image -->
+        <div class="mt-12 rounded-xl overflow-hidden shadow-lg animate-on-scroll">
+          <img src="./assets/images/projects/terracrete-newmap-edo.jpg"
+               alt="ACBM Terracrete manufacture and installation for NEWMAP, Edo State"
+               class="w-full object-cover max-h-80"
+               loading="lazy">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 3 — GROUND STABILISATION
+    ═══════════════════════════════════════════════ -->
+    <section id="ground-stabilisation" class="section-anchor py-20 md:py-28 bg-white" aria-labelledby="ground-heading">
+      <div class="container mx-auto px-6 md:px-12 lg:px-20">
+
+        <div class="mb-14">
+          <span class="text-xs uppercase tracking-widest text-laterite-clay font-bold mb-3 block">Category 03</span>
+          <span class="section-divider"></span>
+          <h2 id="ground-heading" class="text-4xl md:text-5xl font-black text-forest-green mb-5 mt-4">Ground Stabilisation Systems</h2>
+          <p class="text-lg text-concrete-grey leading-relaxed max-w-3xl">
+            Our ground stabilisation systems are developed to improve weak or unstable soils, enabling them to safely support structural and operational loads. These solutions enhance bearing capacity, reduce settlement, and ensure reliable performance in demanding environments.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <div class="product-list-card animate-on-scroll">
+            <div class="product-list-icon">
+              <svg class="w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-forest-green mb-2">Interlocking Concrete Systems</h3>
+              <p class="text-sm text-concrete-grey leading-relaxed">Modular interlocking concrete units for retaining walls, slope stabilisation, and load-bearing platforms. Includes Terraforce hollow-core blocks that promote vegetation and drainage.</p>
+              <a href="./contact.html?product=interlocking-concrete" class="product-card-cta mt-3 inline-flex">
+                Enquire <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-list-card animate-on-scroll delay-100">
+            <div class="product-list-icon">
+              <svg class="w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-forest-green mb-2">Reinforced Paving Solutions</h3>
+              <p class="text-sm text-concrete-grey leading-relaxed">Geocell and geogrid-reinforced paving layers for access roads, car parks, and working platforms over poor ground. Reduces material costs and extends pavement life.</p>
+              <a href="./contact.html?product=reinforced-paving" class="product-card-cta mt-3 inline-flex">
+                Enquire <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-list-card animate-on-scroll delay-200">
+            <div class="product-list-icon">
+              <svg class="w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-forest-green mb-2">Load Support Platforms</h3>
+              <p class="text-sm text-concrete-grey leading-relaxed">Engineered ground platforms designed to distribute heavy equipment loads over soft or variable soils. Critical for crane pads, temporary works, and industrial sites.</p>
+              <a href="./contact.html?product=load-support-platforms" class="product-card-cta mt-3 inline-flex">
+                Enquire <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 4 — URBAN & HARDSCAPE SYSTEMS
+    ═══════════════════════════════════════════════ -->
+    <section id="urban-hardscape" class="section-anchor py-20 md:py-28 bg-forest-green text-white" aria-labelledby="urban-heading">
+      <div class="container mx-auto px-6 md:px-12 lg:px-20">
+
+        <div class="mb-14">
+          <span class="text-xs uppercase tracking-widest text-[#F2D7BA] font-bold mb-3 block">Category 04</span>
+          <div class="w-12 h-1 bg-[#F2D7BA] rounded mb-4"></div>
+          <h2 id="urban-heading" class="text-4xl md:text-5xl font-black text-white mb-5">Urban &amp; Hardscape Systems</h2>
+          <p class="text-lg text-white/80 leading-relaxed max-w-3xl">
+            Our urban and hardscape systems combine structural performance with functional design to create durable and visually appealing environments. These solutions are ideal for public spaces, commercial developments, and infrastructure projects requiring both strength and aesthetics.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <div class="bg-white/10 rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-colors animate-on-scroll">
+            <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Hardscape Elements</h3>
+            <p class="text-white/75 text-sm leading-relaxed">Precast and in-situ concrete elements for plazas, walkways, retaining features, and public realm infrastructure. Durable finishes suited to high-footfall and heavy-use environments.</p>
+            <a href="./contact.html?product=hardscape-elements" class="inline-flex items-center gap-1.5 mt-4 text-[#F2D7BA] text-xs font-bold uppercase tracking-wider hover:gap-3 transition-all">
+              Enquire <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+
+          <div class="bg-white/10 rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-colors animate-on-scroll delay-100">
+            <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Streetscape Solutions</h3>
+            <p class="text-white/75 text-sm leading-relaxed">Integrated street furniture, kerbing, paving, and drainage channel systems designed to unify urban streetscapes while meeting functional load-bearing and drainage requirements.</p>
+            <a href="./contact.html?product=streetscape-solutions" class="inline-flex items-center gap-1.5 mt-4 text-[#F2D7BA] text-xs font-bold uppercase tracking-wider hover:gap-3 transition-all">
+              Enquire <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+
+          <div class="bg-white/10 rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-colors animate-on-scroll delay-200">
+            <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center mb-4">
+              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Landscape Engineering</h3>
+            <p class="text-white/75 text-sm leading-relaxed">Engineered landscaping solutions that integrate slope stability, green infrastructure, and visual appeal — including vegetated retaining systems and bio-engineered embankments.</p>
+            <a href="./contact.html?product=landscape-engineering" class="inline-flex items-center gap-1.5 mt-4 text-[#F2D7BA] text-xs font-bold uppercase tracking-wider hover:gap-3 transition-all">
+              Enquire <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+          </div>
+
+        </div>
+
+        <p class="mt-10 text-white/50 text-xs italic">Product imagery for Urban &amp; Hardscape Systems coming soon.</p>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 5 — ANCHORING SYSTEMS
+    ═══════════════════════════════════════════════ -->
+    <section id="anchoring-systems" class="section-anchor py-20 md:py-28 bg-oyster" aria-labelledby="anchoring-heading">
+      <div class="container mx-auto px-6 md:px-12 lg:px-20">
+
+        <div class="mb-14">
+          <span class="text-xs uppercase tracking-widest text-laterite-clay font-bold mb-3 block">Category 05</span>
+          <span class="section-divider"></span>
+          <h2 id="anchoring-heading" class="text-4xl md:text-5xl font-black text-forest-green mb-5 mt-4">Anchoring Systems</h2>
+          <p class="text-lg text-concrete-grey leading-relaxed max-w-3xl">
+            Our anchoring systems are engineered to provide stability and restraint for structures subjected to lateral and uplift forces. Designed for reliability and strength, these solutions ensure structural integrity in critical applications.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <div class="product-list-card animate-on-scroll">
+            <div class="product-list-icon">
+              <svg class="w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-forest-green mb-2">Concrete Anchors</h3>
+              <p class="text-sm text-concrete-grey leading-relaxed">Cast-in-place and precast concrete anchor blocks designed to resist tension, shear, and overturning forces in pipeline, marine, and retaining wall applications.</p>
+              <a href="./contact.html?product=concrete-anchors" class="product-card-cta mt-3 inline-flex">
+                Enquire <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-list-card animate-on-scroll delay-100">
+            <div class="product-list-icon">
+              <svg class="w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-forest-green mb-2">Tie-Back Systems</h3>
+              <p class="text-sm text-concrete-grey leading-relaxed">Ground anchor and tie-back assemblies for retaining walls, sheet pile walls, and slope stabilisation where lateral earth pressures require active restraint.</p>
+              <a href="./contact.html?product=tie-back-systems" class="product-card-cta mt-3 inline-flex">
+                Enquire <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="product-list-card animate-on-scroll delay-200">
+            <div class="product-list-icon">
+              <svg class="w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-forest-green mb-2">Custom Anchorage</h3>
+              <p class="text-sm text-concrete-grey leading-relaxed">Bespoke anchorage solutions engineered to specific load conditions, geometry, and environmental constraints. Designed for oil and gas, marine, and heavy civil applications.</p>
+              <a href="./contact.html?product=custom-anchorage" class="product-card-cta mt-3 inline-flex">
+                Enquire <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Anchor blocks project image -->
+        <div class="mt-12 rounded-xl overflow-hidden shadow-lg animate-on-scroll">
+          <img src="./assets/images/projects/Manufacturing%20of%20Anchor%20Blocks%20for%206inch%20pipeline%2C%20Port%20Harcourt%2C%20Rivers%20State.%20.jpeg"
+               alt="Manufacturing of concrete anchor blocks for 6-inch pipeline, Port Harcourt, Rivers State"
+               class="w-full object-cover max-h-80"
+               loading="lazy">
+          <div class="bg-white px-6 py-3">
+            <p class="text-xs text-concrete-grey uppercase tracking-wider font-bold">Concrete Anchor Blocks manufactured for 6" pipeline — Port Harcourt, Rivers State</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 6 — CUSTOM ENGINEERED SOLUTIONS
+    ═══════════════════════════════════════════════ -->
+    <section id="custom-engineered" class="section-anchor py-20 md:py-28 bg-white" aria-labelledby="custom-heading">
+      <div class="container mx-auto px-6 md:px-12 lg:px-20">
+
+        <div class="mb-14">
+          <span class="text-xs uppercase tracking-widest text-laterite-clay font-bold mb-3 block">Category 06</span>
+          <span class="section-divider"></span>
+          <h2 id="custom-heading" class="text-4xl md:text-5xl font-black text-forest-green mb-5 mt-4">Custom Engineered Solutions</h2>
+          <p class="text-lg text-concrete-grey leading-relaxed max-w-3xl">
+            Our custom engineered solutions are developed to meet unique project requirements where standard systems are not sufficient. From specialised concrete fabrications to tailored geosynthetic applications, we deliver engineered solutions designed for performance, durability, and project-specific demands.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+          <!-- Concrete Mattress Variants -->
+          <div class="product-list-card animate-on-scroll">
+            <div class="product-list-icon">
+              <svg class="w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-forest-green mb-2">Concrete Mattress Variants</h3>
+              <p class="text-sm text-concrete-grey leading-relaxed">Custom-profiled articulated concrete mattresses engineered for specific hydraulic conditions, channel geometries, and load requirements beyond standard ACBM configurations.</p>
+              <a href="./contact.html?product=concrete-mattress-variants" class="product-card-cta mt-3 inline-flex">
+                Enquire <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Grout Bag Systems -->
+          <div class="product-list-card animate-on-scroll delay-100">
+            <div class="product-list-icon">
+              <svg class="w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-forest-green mb-2">Grout Bag Systems</h3>
+              <p class="text-sm text-concrete-grey leading-relaxed">Engineered grout bag systems in 20kg, 25kg and 70kg sizes, designed for specific revetment, scour protection, and underwater placement requirements on each project.</p>
+              <a href="./contact.html?product=grout-bag-systems" class="product-card-cta mt-3 inline-flex">
+                Enquire <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Bespoke Concrete Fabrications -->
+          <div class="product-list-card animate-on-scroll">
+            <div class="product-list-icon">
+              <svg class="w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-forest-green mb-2">Bespoke Concrete Fabrications</h3>
+              <p class="text-sm text-concrete-grey leading-relaxed">One-off and low-volume concrete fabrications to project-specific drawings — including marine furniture, special anchors, structural blocks, and civil engineering components.</p>
+              <a href="./contact.html?product=bespoke-fabrications" class="product-card-cta mt-3 inline-flex">
+                Enquire <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project-Specific Designs -->
+          <div class="product-list-card animate-on-scroll delay-100">
+            <div class="product-list-icon">
+              <svg class="w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-forest-green mb-2">Project-Specific Designs</h3>
+              <p class="text-sm text-concrete-grey leading-relaxed">Full design-and-supply service for unique project challenges. Our engineers work directly with clients and consultants to develop solutions where no off-the-shelf product exists.</p>
+              <a href="./contact.html?product=project-specific-designs" class="product-card-cta mt-3 inline-flex">
+                Enquire <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── CTA BAND ── -->
+    <section class="py-20 bg-oyster text-center">
+      <div class="container mx-auto px-6 md:px-12 lg:px-20 max-w-3xl">
+        <span class="section-divider mx-auto"></span>
+        <h2 class="text-4xl font-black text-forest-green mb-4">Not sure which product you need?</h2>
+        <p class="text-lg text-concrete-grey mb-8">Tell us about your project. Our engineers will recommend the right solution and provide a full specification.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="./contact.html" class="paper-btn-primary">Start a Project</a>
+          <a href="./projects.html" class="paper-btn-secondary">View Our Work</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer bg-forest-green text-white py-16">
+    <div class="container mx-auto px-6 md:px-12 lg:px-20">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="flex flex-col gap-0.5 w-10">
+              <div class="h-1.5 bg-white rounded-sm opacity-100"></div>
+              <div class="h-1.5 bg-white rounded-sm opacity-85"></div>
+              <div class="h-1.5 bg-white rounded-sm opacity-70"></div>
+              <div class="h-1.5 bg-white rounded-sm opacity-55"></div>
+              <div class="h-1.5 bg-white rounded-sm opacity-40"></div>
+            </div>
+            <div>
+              <div class="text-xl font-black uppercase tracking-tight leading-none">BAYTREE</div>
+              <div class="text-xs uppercase tracking-widest opacity-60 mt-0.5">Engineering &amp; Construction</div>
+            </div>
+          </div>
+          <p class="text-sm opacity-70 leading-relaxed max-w-sm mb-6">From materials to performance, we secure your project. Durable, sustainable and built to last. Based in Lagos and Warri delivering across Nigeria and beyond.</p>
+          <div class="flex gap-3">
+            <a href="https://www.instagram.com/baytreeengineering" class="footer-social-btn" aria-label="Instagram" rel="noopener noreferrer" target="_blank">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Facebook" rel="noopener noreferrer" target="_blank">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="LinkedIn" rel="noopener noreferrer" target="_blank">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="footer-social-btn" aria-label="Twitter / X" rel="noopener noreferrer" target="_blank">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-xs uppercase tracking-wider font-bold mb-5 text-laterite-clay">Quick Links</h3>
+          <ul class="space-y-3 text-sm">
+            <li><a href="./index.html"    class="opacity-70 hover:opacity-100 transition-opacity">Home</a></li>
+            <li><a href="./products.html" class="opacity-100">Products</a></li>
+            <li><a href="./services.html" class="opacity-70 hover:opacity-100 transition-opacity">Services</a></li>
+            <li><a href="./projects.html" class="opacity-70 hover:opacity-100 transition-opacity">Projects</a></li>
+            <li><a href="./about.html"    class="opacity-70 hover:opacity-100 transition-opacity">About</a></li>
+            <li><a href="./contact.html"  class="opacity-70 hover:opacity-100 transition-opacity">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xs uppercase tracking-wider font-bold mb-5 text-laterite-clay">Contact</h3>
+          <ul class="space-y-3 text-sm opacity-70">
+            <li>Plot 6 Idowu Olaitan Street,<br>Gbagada Phase 2, Lagos</li>
+            <li>Plot 40 Ogunu Road,<br>Warri, Delta State</li>
+            <li><a href="mailto:info@baytreeng.com" class="hover:opacity-100 transition-opacity">info@baytreeng.com</a></li>
+            <li><a href="tel:+2348057777724"        class="hover:opacity-100 transition-opacity">+234 805 777 7724</a></li>
+            <li><a href="tel:+2348039458755"        class="hover:opacity-100 transition-opacity">+234 803 945 8755</a></li>
+            <li><a href="tel:+2349060001606"        class="hover:opacity-100 transition-opacity">+234 906 000 1606 (Warri)</a></li>
+            <li><a href="https://wa.me/2349060001606" class="hover:opacity-100 transition-opacity flex items-center gap-2" rel="noopener noreferrer" target="_blank">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp
+            </a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/70">
+        <p>&copy; 2026 BayTree Engineering &amp; Construction Limited. All rights reserved.</p>
+        <p>Website by <a href="https://onenetservers.net" class="text-laterite-clay hover:text-white transition-colors" rel="noopener noreferrer" target="_blank">OneNet Servers</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── WHATSAPP FAB ── -->
+  <a href="https://wa.me/2349060001606?text=Hello%20BayTree%2C%20I%20would%20like%20to%20discuss%20a%20project." class="whatsapp-fab" aria-label="Chat on WhatsApp" rel="noopener noreferrer" target="_blank">
+    <span class="whatsapp-fab-tooltip">Chat with us</span>
+    <div class="whatsapp-fab-bubble">
+      <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </div>
+  </a>
+
+  <script src="./assets/js/main.min.js" defer></script>
+  <script>
+    // ── Products dropdown (desktop) ──
+    (function () {
+      const wrap = document.getElementById('products-dropdown-wrap');
+      const btn  = document.getElementById('products-dropdown-btn');
+      const menu = document.getElementById('products-dropdown-menu');
+      if (!wrap || !btn || !menu) return;
+
+      function open()  { menu.classList.add('open');  btn.setAttribute('aria-expanded', 'true');  btn.querySelector('.nav-chevron').style.transform = 'rotate(180deg)'; }
+      function close() { menu.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); btn.querySelector('.nav-chevron').style.transform = ''; }
+
+      wrap.addEventListener('mouseenter', open);
+      wrap.addEventListener('mouseleave', close);
+      btn.addEventListener('click', () => menu.classList.contains('open') ? close() : open());
+
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+      document.addEventListener('click',   e => { if (!wrap.contains(e.target)) close(); });
+    })();
+
+    // ── Category sticky nav active state on scroll ──
+    (function () {
+      const tabs     = document.querySelectorAll('.cat-tab');
+      const sections = Array.from(tabs).map(t => document.querySelector(t.getAttribute('href')));
+
+      function onScroll() {
+        let active = 0;
+        sections.forEach((sec, i) => {
+          if (sec && window.scrollY >= sec.offsetTop - 160) active = i;
+        });
+        tabs.forEach((t, i) => t.classList.toggle('active', i === active));
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+  </script>
+</body>
+</html>
