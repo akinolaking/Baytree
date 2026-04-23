@@ -148,6 +148,77 @@
     @apply paper-card bg-white rounded-xl p-6 border-l-4 border-forest-green;
   }
 
+  /* ── Mega-menu ── */
+  .mega-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    width: 580px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 24px 48px rgba(0,0,0,0.14), 0 6px 16px rgba(0,0,0,0.08);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.22s ease, transform 0.22s ease;
+    z-index: 200;
+    overflow: hidden;
+  }
+  .mega-menu.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+  .mega-inner {
+    display: grid;
+    grid-template-columns: 1fr 180px;
+  }
+  .mega-categories {
+    padding: 20px 16px 20px 20px;
+  }
+  .mega-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: #414741;
+    margin-bottom: 10px;
+    padding: 0 8px;
+  }
+  .mega-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #262826;
+    text-decoration: none;
+    transition: background-color 0.15s, color 0.15s;
+    white-space: nowrap;
+  }
+  .mega-item:hover { background-color: #F6F4EF; color: #2A4B20; }
+  .mega-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    background: rgba(42,75,32,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2A4B20;
+    flex-shrink: 0;
+  }
+  .mega-panel {
+    background: #2A4B20;
+    padding: 24px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
   /* ── Mobile drawer ── */
   .drawer-overlay {
     @apply fixed inset-0 bg-black/50 z-[60] opacity-0 pointer-events-none transition-opacity duration-300;

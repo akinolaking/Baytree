@@ -175,6 +175,39 @@ function initContactForm() {
   }
 }
 
+// ── Products mega-menu ────────────────────────────────────────────────────
+function initMegaMenu() {
+  const wrapper = document.getElementById('products-menu-wrapper');
+  const trigger = document.getElementById('products-trigger');
+  const menu    = document.getElementById('products-mega');
+  const chevron = document.getElementById('products-chevron');
+  if (!wrapper || !trigger || !menu) return;
+
+  let closeTimer;
+
+  function open() {
+    clearTimeout(closeTimer);
+    menu.classList.add('open');
+    trigger.setAttribute('aria-expanded', 'true');
+    if (chevron) chevron.style.transform = 'rotate(180deg)';
+  }
+
+  function close() {
+    closeTimer = setTimeout(() => {
+      menu.classList.remove('open');
+      trigger.setAttribute('aria-expanded', 'false');
+      if (chevron) chevron.style.transform = '';
+    }, 120);
+  }
+
+  wrapper.addEventListener('mouseenter', open);
+  wrapper.addEventListener('mouseleave', close);
+  trigger.addEventListener('click', () => menu.classList.contains('open') ? close() : open());
+
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+  document.addEventListener('click',   (e) => { if (!wrapper.contains(e.target)) close(); });
+}
+
 // ── Boot ───────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
@@ -183,4 +216,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initSlider();
   initPortfolioFilter();
   initContactForm();
+  initMegaMenu();
 });
